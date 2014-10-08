@@ -1,0 +1,27 @@
+<h1>Listing historia</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Id singularidad</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @historia.each do |historium| %>
+      <tr>
+        <td><%= historium.id_singularidad %></td>
+        <td><%= link_to 'Show', historium %></td>
+        <td><%= link_to 'Edit', edit_historium_path(historium) %></td>
+        <td><%= link_to 'Destroy', historium, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Historium', new_historium_path %>
