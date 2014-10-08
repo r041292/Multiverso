@@ -1,10 +1,10 @@
-<%= form_for(@historium) do |f| %>
-  <% if @historium.errors.any? %>
+<%= form_for(@historias) do |f| %>
+  <% if @historias.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@historium.errors.count, "error") %> prohibited this historium from being saved:</h2>
+      <h2><%= pluralize(@historias.errors.count, "error") %> prohibited this historias from being saved:</h2>
 
       <ul>
-      <% @historium.errors.full_messages.each do |msg| %>
+      <% @historias.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
       <% end %>
       </ul>

@@ -1,13 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 one:
-  contenido: MyString
+  texto: MyString
   url: MyString
   tipo: MyString
   id_autor: 1
 
 two:
-  contenido: MyString
+  texto: MyString
   url: MyString
   tipo: MyString
   id_autor: 1

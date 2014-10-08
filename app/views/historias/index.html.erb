@@ -1,0 +1,27 @@
+<h1>Listing historias</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Id singularidad</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @historias.each do |historias| %>
+      <tr>
+        <td><%= historias.id_singularidad %></td>
+        <td><%= link_to 'Show', historias %></td>
+        <td><%= link_to 'Edit', edit_historias_path(historias) %></td>
+        <td><%= link_to 'Destroy', historias, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Historia', new_historias_path %>

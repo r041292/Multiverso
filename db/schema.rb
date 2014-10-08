@@ -11,12 +11,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141008014138) do
+ActiveRecord::Schema.define(version: 20141008023956) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "historia", force: true do |t|
+  create_table "historias", force: true do |t|
     t.integer  "id_singularidad"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -31,8 +31,8 @@ ActiveRecord::Schema.define(version: 20141008014138) do
     t.datetime "updated_at"
   end
 
-  create_table "publicacions", force: true do |t|
-    t.string   "contenido"
+  create_table "publicaciones", force: true do |t|
+    t.string   "texto"
     t.string   "url"
     t.string   "tipo"
     t.integer  "id_autor"

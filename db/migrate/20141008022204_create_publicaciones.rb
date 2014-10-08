@@ -1,7 +1,7 @@
-class CreatePublicacions < ActiveRecord::Migration
+class CreatePublicaciones < ActiveRecord::Migration
   def change
-    create_table :publicacions do |t|
-      t.string :contenido
+    create_table :publicaciones do |t|
+      t.string :texto
       t.string :url
       t.string :tipo
       t.integer :id_autor
