@@ -81,4 +81,6 @@ Multiverso::Application.configure do
   # Missing Configuration of config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
   # In production, :host should be set to the actual host of your application.
 
+  #Config for Foundation
+  config.assets.precompile += %w( vendor/modernizr.js )
 end

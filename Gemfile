@@ -20,6 +20,9 @@ gem 'omniauth-facebook'
 # Use certified for ssl authentication (facebook requires this)
 gem 'certified'
 
+# Foundation
+gem 'foundation-rails'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 
