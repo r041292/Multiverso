@@ -12,10 +12,13 @@ gem 'devise','~>3.4.0'
 # Use cancan for user roles
 gem 'cancan', '~>1.6.10'
 
-#use omniauth for socialnetwork authentication
+# Use omniauth for socialnetwork authentication
 gem 'omniauth'
 gem 'omniauth-twitter'
 gem 'omniauth-facebook'
+
+# Use certified for ssl authentication (facebook requires this)
+gem 'certified'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
