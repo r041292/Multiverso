@@ -6,6 +6,12 @@ gem 'rails', '4.0.0'
 # Use postgresql as the database for Active Record
 gem 'pg'
 
+# Use devise for user authentication
+gem 'devise','~>3.4.0'
+
+# Use cancan for user roles
+gem 'cancan', '~>1.6.10'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 
