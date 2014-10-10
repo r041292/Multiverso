@@ -14,6 +14,9 @@
   <body>
 
     <% if user_signed_in? %>
+        <% if current_user.admin? %>
+          <li>Admin - <%= current_user.name %></li>
+        <% end %>
       <li>
         <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
       </li>
