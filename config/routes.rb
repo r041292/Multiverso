@@ -1,6 +1,7 @@
 Multiverso::Application.routes.draw do
-  resources :publicaciones
   resources :historias
+
+  resources :publicaciones
 
   root to: "publicaciones#index"
 

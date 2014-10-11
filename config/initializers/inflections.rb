@@ -18,5 +18,4 @@
 ActiveSupport::Inflector.inflections(:en) do |inflect|
 	inflect.plural "publicacion", "publicaciones"
 	inflect.plural "historia", "historias"
-	inflect.singular "historia", "historia"
 end

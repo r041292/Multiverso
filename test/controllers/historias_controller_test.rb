@@ -2,7 +2,7 @@ require 'test_helper'
 
 class HistoriasControllerTest < ActionController::TestCase
   setup do
-    @historias = historias(:one)
+    @historia = historias(:one)
   end
 
   test "should get index" do
@@ -16,32 +16,32 @@ class HistoriasControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test "should create historias" do
+  test "should create historia" do
     assert_difference('Historia.count') do
-      post :create, historias: { id_singularidad: @historias.id_singularidad }
+      post :create, historia: { id_singularidad: @historia.id_singularidad }
     end
 
-    assert_redirected_to historias_path(assigns(:historias))
+    assert_redirected_to historia_path(assigns(:historia))
   end
 
-  test "should show historias" do
-    get :show, id: @historias
+  test "should show historia" do
+    get :show, id: @historia
     assert_response :success
   end
 
   test "should get edit" do
-    get :edit, id: @historias
+    get :edit, id: @historia
     assert_response :success
   end
 
-  test "should update historias" do
-    patch :update, id: @historias, historias: { id_singularidad: @historias.id_singularidad }
-    assert_redirected_to historias_path(assigns(:historias))
+  test "should update historia" do
+    patch :update, id: @historia, historia: { id_singularidad: @historia.id_singularidad }
+    assert_redirected_to historia_path(assigns(:historia))
   end
 
-  test "should destroy historias" do
+  test "should destroy historia" do
     assert_difference('Historia.count', -1) do
-      delete :destroy, id: @historias
+      delete :destroy, id: @historia
     end
 
     assert_redirected_to historias_path
