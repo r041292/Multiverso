@@ -11,16 +11,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141010235033) do
+ActiveRecord::Schema.define(version: 20141010002910) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-
-  create_table "historias", force: true do |t|
-    t.integer  "id_singularidad"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
 
   create_table "identities", force: true do |t|
     t.integer  "user_id"
@@ -48,7 +42,6 @@ ActiveRecord::Schema.define(version: 20141010235033) do
     t.integer  "id_autor"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.boolean  "singularidad", default: false
   end
 
   create_table "users", force: true do |t|
