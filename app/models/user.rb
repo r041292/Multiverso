@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+  has_many :publications
 
 	TEMP_EMAIL_PREFIX = ''
 	TEMP_EMAIL_REGEX = /\A/

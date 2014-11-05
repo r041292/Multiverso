@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  history_id_id: 
+  rlink_id: 
+  llink_id: 
+  publication_id_id: 
+
+two:
+  history_id_id: 
+  rlink_id: 
+  llink_id: 
+  publication_id_id: 
