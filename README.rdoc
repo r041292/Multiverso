@@ -1,28 +1,10 @@
-== README
+== Multiverso
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+ SISTEMA DE CONSTRUCCIÓN PARTICIPATIVA DE TEXTOS MULTIMEDIALES SOBRE LA WEB, PARA EL ÁREA DE ACTIVIDADES CULTURALES DE LA BIBLIOTECA KARL C PARRISH DE LA UNIVERSIDAD DEL NORTE.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+ Estudiantes: Laura Garcia y Rubiel Velasquez
+ Asesor: Pedro Wightman
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+ La actividad propuesta lleva como nombre Multiverso y es una plataforma online que cual permite la construcción de narrativas no lineales, de manera colaborativa, usando recursos de internet.
+
