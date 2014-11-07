@@ -1,6 +1,6 @@
 class HistoriesController < ApplicationController
   before_action :set_history, only: [:show, :edit, :update, :destroy]
-
+  respond_to :html, :xml, :json
   def index
     @histories = History.all
     respond_with(@histories)
