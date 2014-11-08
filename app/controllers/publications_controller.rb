@@ -13,6 +13,8 @@ class PublicationsController < ApplicationController
   end
 
   def new
+    @history_id = params[:history_id]
+    @llink = params[:llink]
     @publication = Publication.new
     respond_with(@publication)
   end
@@ -23,6 +25,25 @@ class PublicationsController < ApplicationController
   def create
     @publication = Publication.new(publication_params)
     @publication.save
+
+    @history_id = params[:history_id]
+    @llink = params[:llink]
+    @p_and_h= PublicationsAndHistory.where("history_id_id = #{@history_id} AND publication_id_id = #{@llink}")
+    @p_and_h.each do |publ|
+      if publ.rlink_id == nil
+      publ.rlink_id = @publication.id
+      publ.save
+
+      @n_ph = PublicationsAndHistory.new
+      @n_ph.llink_id = @llink
+      @n_ph.publication_id_id = @publication.id
+      @n_ph.history_id_id = @history_id
+      @n_ph.save
+    end
+    end
+
+   
+
     respond_with(@publication)
   end
 
