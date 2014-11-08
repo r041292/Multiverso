@@ -40,6 +40,37 @@ class PublicationsController < ApplicationController
       @n_ph.history_id_id = @history_id
       @n_ph.save
     end
+      puts "its not nill i must create a new history omg with publication #{@publication.id}"
+      @n_history= History.new
+      @temp_history = History.find(@history_id)
+      @n_history.publication_id_id = @temp_history.publication_id_id
+      @n_history.save
+      @n_ph= PublicationsAndHistory.where("history_id_id = #{@history_id}")
+      @n_ph.each do |posts|
+        @temp_ph = PublicationsAndHistory.new
+        @temp_ph.history_id_id = @n_history.id
+        if(posts.publication_id_id == Integer(@llink))
+          puts "yes publicacion encontrada"
+          @temp_ph.llink_id = posts.llink_id
+          @temp_ph.publication_id_id = posts.publication_id_id
+          @temp_ph.rlink_id = @publication.id
+          @temp_ph.save
+
+          @temp_ph = PublicationsAndHistory.new
+          @temp_ph.llink_id = @llink
+          @temp_ph.publication_id_id = @publication.id
+          @temp_ph.history_id_id = @n_history.id
+          @temp_ph.save
+          break
+        else
+          @temp_ph.rlink_id = posts.rlink_id
+          @temp_ph.llink_id = posts.llink_id
+          @temp_ph.publication_id_id = posts.publication_id_id
+          @temp_ph.save
+        end
+
+      end
+
     end
 
    
