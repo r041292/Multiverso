@@ -16,12 +16,6 @@ ActiveRecord::Schema.define(version: 20141105160126) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "historias", force: true do |t|
-    t.integer  "id_singularidad"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "histories", force: true do |t|
     t.integer  "publication_id_id"
     t.datetime "created_at"
@@ -56,7 +50,6 @@ ActiveRecord::Schema.define(version: 20141105160126) do
     t.integer  "id_autor"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.boolean  "singularidad", default: false
   end
 
   create_table "publications", force: true do |t|
