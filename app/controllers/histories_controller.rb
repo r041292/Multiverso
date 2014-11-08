@@ -7,6 +7,11 @@ class HistoriesController < ApplicationController
   end
 
   def show
+    if(user_signed_in?)
+      @signed = true
+    else
+      @signed = false
+    end
     @p_and_h= PublicationsAndHistory.find_all_by_history_id_id @history.id
     @publications = Array.new()
     @p_and_h.each do |publ|
