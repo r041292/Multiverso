@@ -2,8 +2,17 @@
 
 <p>
   <strong>Publication:</strong>
-  <%= @history.publication_id %>
+  <%= @history.publication_id_id %>
 </p>
+
+<tbody>
+    <% @publications.each do |publ| %>
+      <tr>
+      	<td><%= publ.content %></td><br>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
 
 <%= link_to 'Edit', edit_history_path(@history) %> |
 <%= link_to 'Back', histories_path %>
