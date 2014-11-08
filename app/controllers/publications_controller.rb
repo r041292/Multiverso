@@ -4,6 +4,7 @@ class PublicationsController < ApplicationController
 
   def index
     @publications = Publication.all
+    @singularity = History.first
     respond_with(@publications)
   end
 
