@@ -1,7 +1,7 @@
 
 <h1>Multiverso</h1>
 <p><strong>Historia del mes Biblioteca Karl C. Parrish<strong></p>
-<p><%= @singularity.publication_id_id.content %></p>
+<p><%= @singularity.publication.content %></p>
 <h2>Timeline</h2>
 <% @publications.each do |publication|%>
   <hr>
@@ -9,7 +9,7 @@
     <div class="columns large-9 medium-6">
       <blockquote>
         <%= link_to content_tag('h3',publication.content), publication %>
-        <cite><%= publication.user_id_id.name %> - <em><%= time_ago_in_words(publication.created_at) %> ago</em></cite>
+        
       </blockquote>
     </div>
     <div class="columns large-3 medium-6">

@@ -45,6 +45,6 @@ class HistoriesController < ApplicationController
     end
 
     def history_params
-      params.require(:history).permit(:publication_id_id)
+      params.require(:history).permit(:publication_id)
     end
 end
