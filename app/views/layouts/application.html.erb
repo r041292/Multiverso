@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title><%= content_for?(:title) ? yield(:title) : "foundation-rails" %></title>
+    <title><%= content_for?(:title) ? yield(:title) : "Multiverso -  Uninorte" %></title>
 
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "vendor/modernizr" %>
@@ -12,19 +12,48 @@
   </head>
 
   <body>
-
-    <% if user_signed_in? %>
-        <% if current_user.admin? %>
-          <li>Admin - <%= current_user.name %></li>
-        <% end %>
-      <li>
-        <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
-      </li>
-    <% else %>
-      <li>
-        <%= link_to('Login', new_user_session_path)  %>
-      </li>
-    <% end %>
+    <nav class="top-bar" data-topbar role="navigation">
+      <ul class="title-area">
+        <li class="name">
+          <h1><a href="#">Uninorte</a></h1>
+        </li>
+        <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+        <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+      </ul>
+      <section class="top-bar-section">
+        <!-- Right Nav Section -->
+        <ul class="right">
+          <li class="divider"></li>
+          <% if user_signed_in? %>
+            <% if current_user.admin? %>
+              <li class="has-form"><a href="#" class="button">Admin - <%= current_user.name %></a></li>
+            <% else %>
+              <li class="name"><a href="#" onclick="return false" >Hola <%= current_user.name %> !</a></li>
+            <% end %>
+            <li class="has-form"><%= link_to('Cerrar sesion', destroy_user_session_path, :method => :delete) %></l>
+          <% else %>
+          <li class="name"><a href="#" onclick="return false" >Iniciar sesion con</a></li>
+          <li class="has-form"><a href="/users/auth/facebook" class="button">Facebook</a></li>
+          <li class="has-form"><a href="/users/auth/twitter" class="button">Twitter</a></li>
+          <% end %>
+          
+        </ul>
+        <!-- Left Nav Section -->
+        <ul class="left">
+          <li class="has-form">
+            <div class="row collapse">
+              <div class="large-8 small-9 columns">
+                <input type="text" placeholder="Ejemplo: Drama">
+              </div>
+              <div class="large-4 small-3 columns">
+                <a href="#" class="button">Buscar</a>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </section>
+    </nav>
+    
 
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
