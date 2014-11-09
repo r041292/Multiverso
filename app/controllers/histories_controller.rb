@@ -7,12 +7,7 @@ class HistoriesController < ApplicationController
   end
 
   def show
-    @p_and_h= PublicationsAndHistory.find_all_by_history_id @history.id
-    @publications = Array.new()
-    @publications.push(Publication.find_by_id @p_and_h[0].llink_id)
-    @p_and_h.each do |publ|
-      @publications.push(Publication.find_by_id publ.publication_id)
-    end
+    @publications = History.publications_from_history(@history)
     respond_with(@history)
   end
 
@@ -26,30 +21,14 @@ class HistoriesController < ApplicationController
 
   def show_history_continuation
     @publication_id = params[:publication_id]
-    @history = params[:history_id]
-    @histories = Array.new()
-    @histories_to_exclude = Array.new()
-    @publications = Array.new()
+    @history_id = params[:history_id]
+    @histories = History.histories_without_publication(@publication_id)
 
-    @p_and_h= PublicationsAndHistory.find_all_by_publication_id @publication_id
-    @p_and_h.each do |post|
-      if(!@histories_to_exclude.include? post.history.id)
-        @histories_to_exclude.push(post.history.id)
-      end
+    if(@history_id == nil)
+      @history_id = @histories[0].id
     end
 
-    @histories=History.where("id NOT IN (?)", @histories_to_exclude)
-
-    if(@history == nil)
-      @history = @histories[0].id
-    end
-
-    @p_and_h = PublicationsAndHistory.find_all_by_history_id @history
-    @publications.push(Publication.find_by_id @p_and_h[0].llink_id)
-    @p_and_h.each do |post|
-        @publications.push(Publication.find_by_id post.publication_id)
-    end
-
+    @publications = History.publications_from_history(History.find_by_id @history_id)
   end
 
   def continue_with_posted_publication

@@ -28,7 +28,6 @@ class PublicationsController < ApplicationController
     @llink = params[:llink]
     Publication.create_publications_and_histories(@history_id,@llink,@publication.id)
     respond_with(@publication)
-  
   end
 
   def new
