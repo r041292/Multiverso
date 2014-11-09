@@ -1,0 +1,1 @@
+$("#publications").append("<%= escape_javascript(render(@publications)) %>");

@@ -3,7 +3,7 @@ class PublicationsController < ApplicationController
    respond_to :html, :xml, :json
 
   def index
-    @publications = Publication.order('id DESC')
+    @publications = Publication.order("updated_at desc").page(params[:page]).per(15)
     @singularity = History.first
     respond_with(@publications)
   end
@@ -60,6 +60,13 @@ class PublicationsController < ApplicationController
   def destroy
     @publication.destroy
     respond_with(@publication)
+  end
+
+  def more_publications
+    @publications = Publication.order("updated_at desc").page(params[:page]).per(15)
+    respond_to do |format|
+      format.json { render :json => @publications }
+    end
   end
 
   private
