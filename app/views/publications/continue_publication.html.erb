@@ -1,3 +1,4 @@
+<%= javascript_include_tag "hide_content_url" %>
 <h1>Continuar publicación</h1>
 <%= form_for(@publication, url: continue_publication_new_path) do |f| %>
   <% if @publication.errors.any? %>
@@ -13,16 +14,16 @@
   <% end %>
 
   <div class="field">
+    <%= f.label :type %><br>
+    <%= f.select :type, options_for_select([["Texto", "1"], ["Instagram", "2"],  ["Vine", "3"] ]),  {:prompt => 'Selecciona el tipo de tu publicación'} %>
+  </div>
+  <div class="field" id="content" style="display: none">
     <%= f.label :content %><br>
     <%= f.text_field :content %>
   </div>
-  <div class="field">
+  <div class="field" id="url" style="display: none">
     <%= f.label :url %><br>
     <%= f.text_field :url %>
-  </div>
-  <div class="field">
-    <%= f.label :type %><br>
-    <%= f.select :type, options_for_select([["Texto", "1"], ["Instagram", "2"],  ["Vine", "3"] ]) %>
   </div>
   <%= hidden_field_tag :history_id, @history_id, :id => "history_id" %>
   <%= hidden_field_tag :llink, @llink, :id => "llink" %>
