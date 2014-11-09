@@ -28,7 +28,7 @@ class PublicationsController < ApplicationController
 
     @history_id = params[:history_id]
     @llink = params[:llink]
-    @p_and_h= PublicationsAndHistory.where("history_id_id = #{@history_id} AND publication_id_id = #{@llink}")
+    @p_and_h= PublicationsAndHistory.where("history_id = #{@history_id} AND publication_id = #{@llink}")
     @p_and_h.each do |publ|
       if publ.rlink_id == nil
       publ.rlink_id = @publication.id
@@ -36,36 +36,36 @@ class PublicationsController < ApplicationController
 
       @n_ph = PublicationsAndHistory.new
       @n_ph.llink_id = @llink
-      @n_ph.publication_id_id = @publication.id
-      @n_ph.history_id_id = @history_id
+      @n_ph.publication_id = @publication.id
+      @n_ph.history_id = @history_id
       @n_ph.save
     end
       puts "its not nill i must create a new history omg with publication #{@publication.id}"
       @n_history= History.new
       @temp_history = History.find(@history_id)
-      @n_history.publication_id_id = @temp_history.publication_id_id
+      @n_history.publication_id = @temp_history.publication_id
       @n_history.save
-      @n_ph= PublicationsAndHistory.where("history_id_id = #{@history_id}")
+      @n_ph= PublicationsAndHistory.where("history_id = #{@history_id}")
       @n_ph.each do |posts|
         @temp_ph = PublicationsAndHistory.new
-        @temp_ph.history_id_id = @n_history.id
-        if(posts.publication_id_id == Integer(@llink))
+        @temp_ph.history_id = @n_history.id
+        if(posts.publication_id == Integer(@llink))
           puts "yes publicacion encontrada"
           @temp_ph.llink_id = posts.llink_id
-          @temp_ph.publication_id_id = posts.publication_id_id
+          @temp_ph.publication_id = posts.publication_id
           @temp_ph.rlink_id = @publication.id
           @temp_ph.save
 
           @temp_ph = PublicationsAndHistory.new
           @temp_ph.llink_id = @llink
-          @temp_ph.publication_id_id = @publication.id
-          @temp_ph.history_id_id = @n_history.id
+          @temp_ph.publication_id = @publication.id
+          @temp_ph.history_id = @n_history.id
           @temp_ph.save
           break
         else
           @temp_ph.rlink_id = posts.rlink_id
           @temp_ph.llink_id = posts.llink_id
-          @temp_ph.publication_id_id = posts.publication_id_id
+          @temp_ph.publication_id = posts.publication_id
           @temp_ph.save
         end
 
@@ -94,6 +94,6 @@ class PublicationsController < ApplicationController
     end
 
     def publication_params
-      params.require(:publication).permit(:content, :url, :user_id_id, :type, :singularity)
+      params.require(:publication).permit(:content, :url, :user_id, :type, :singularity)
     end
 end

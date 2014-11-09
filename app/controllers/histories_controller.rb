@@ -12,10 +12,10 @@ class HistoriesController < ApplicationController
     else
       @signed = false
     end
-    @p_and_h= PublicationsAndHistory.find_all_by_history_id_id @history.id
+    @p_and_h= PublicationsAndHistory.find_all_by_history_id @history.id
     @publications = Array.new()
     @p_and_h.each do |publ|
-      @publications.push(Publication.find_by_id publ.publication_id_id)
+      @publications.push(Publication.find_by_id publ.publication_id)
     end
     respond_with(@history)
   end
