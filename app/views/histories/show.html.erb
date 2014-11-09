@@ -8,7 +8,7 @@
 <tbody>
     <% @publications.each do |publ| %>
       <tr>
-      	<td><%= publ.content %><% if @signed %> <%= link_to ' Continuar', new_publication_path(:history_id =>@history.id, :llink => publ.id) %><%end%></td><br>
+      	<td><%= publ.content %><% if @signed %> <%= link_to ' Continuar', continue_publication_path(:history_id =>@history.id, :llink => publ.id) %><%end%></td><br>
       </tr>
     <% end %>
   </tbody>

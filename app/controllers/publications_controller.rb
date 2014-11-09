@@ -12,21 +12,26 @@ class PublicationsController < ApplicationController
     respond_with(@publication)
   end
 
-  def new
+  def continue_publication
     @history_id = params[:history_id]
     @llink = params[:llink]
-    if(@history_id!=nil and @llink!=nil and !current_user.admin)
-      @publication = Publication.new
-      respond_with(@publication)
-    else
-      if(current_user.admin)
-        @publication = Publication.new
-        respond_with(@publication)
-      else
-        redirect_to :action => 'index', :notice => 'Something went wrong.'
-      end
-    end
+    @publication = Publication.new
+    respond_with(@publication)
+  end
 
+  def create_continue_publication
+    @publication = Publication.new(publication_params)
+    @publication.save
+    @history_id = params[:history_id]
+    @llink = params[:llink]
+    Publication.create_publications_and_histories(@history_id,@llink,@publication.id)
+    respond_with(@publication)
+  
+  end
+
+  def new
+    @publication = Publication.new
+    respond_with(@publication)
   end
 
   def edit
@@ -35,14 +40,9 @@ class PublicationsController < ApplicationController
   def create
     @publication = Publication.new(publication_params)
     @publication.save
-
-    @history_id = params[:history_id]
-    @llink = params[:llink]
-    if(!current_user.admin)
-      Publication.create_publications_and_histories(@history_id,@llink,@publication.id)
-    end
     respond_with(@publication)
   end
+
 
   def update
     @publication.update(publication_params)

@@ -1,0 +1,43 @@
+<h1>Continuar publicación</h1>
+<%= form_for(@publication, url: continue_publication_new_path) do |f| %>
+  <% if @publication.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@publication.errors.count, "error") %> prohibited this publication from being saved:</h2>
+
+      <ul>
+      <% @publication.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :content %><br>
+    <%= f.text_field :content %>
+  </div>
+  <div class="field">
+    <%= f.label :url %><br>
+    <%= f.text_field :url %>
+  </div>
+  <div class="field">
+    <%= f.label :user_id %><br>
+    <%= f.text_field :user_id%>
+  </div>
+  <div class="field">
+    <%= f.label :type %><br>
+    <%= f.number_field :type %>
+  </div>
+  <div class="field">
+    <%= f.label :singularity %><br>
+    <%= f.check_box :singularity %>
+  </div>
+  <%= hidden_field_tag :history_id, @history_id, :id => "history_id" %>
+  <%= hidden_field_tag :llink, @llink, :id => "llink" %>
+  <div class="actions">
+    <%= f.submit %>
+
+  </div>
+<% end %>
+
+
