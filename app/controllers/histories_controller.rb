@@ -34,13 +34,13 @@ class HistoriesController < ApplicationController
     else
       @signed = false
     end
-    @publicaction_id = params[:publication_id]
+    @publication_id = params[:publication_id]
     @history = params[:history_id]
     @histories = Array.new()
     @histories_to_exclude = Array.new()
     @publications = Array.new()
 
-    @p_and_h= PublicationsAndHistory.find_all_by_publication_id @publicaction_id
+    @p_and_h= PublicationsAndHistory.find_all_by_publication_id @publication_id
     @p_and_h.each do |post|
       if(!@histories_to_exclude.include? post.history.id)
         @histories_to_exclude.push(post.history.id)
@@ -63,9 +63,9 @@ class HistoriesController < ApplicationController
   def continue_with_posted_publication
     @history_id = params[:history_id]
     @llink = params[:llink]
-    @publicaction_id = params[:publicaction]
+    @publication_id = params[:publication]
     Publication.create_publications_and_histories(@history_id,@llink,@publication_id)
-    respond_with(@history)
+    redirect_to publication_url(@publication_id)
   end
 
   def create
