@@ -1,5 +1,6 @@
-<p id="notice"><%= notice %></p>
-<p><strong>Historia numero: </strong><%= @history.id %></p>
+Barra de historias: <% @histories.each do |history| %>
+<%= link_to history.id, show_history_continuation_path(:history_id => history.id, :publication_id => @publication_id) %>
+<% end %>
 <table>
   <tbody>
     <% @publications.each do |publication| %>
@@ -17,13 +18,10 @@
     	  </div>
         <div class="columns large-3 medium-6">
           <ul class="inline-list">
-            <li> <%= link_to 'Tambien en', show_history_include_publication_path(:publication_id => publication.id) %><% if user_signed_in?  %> | <%= link_to ' Continuar', continue_publication_path(:history_id =>@history.id, :llink => publication.id) %><% if !publication.singularity %> | <%= link_to 'Usar como continuacion', :controller =>"histories", :action => "show_history_continuation", :publication_id => publication.id %><%end%><%end%></li>
+            <li><% if user_signed_in? %> <%= link_to ' Continuar', show_history_continuation_continue_with_posted_publication_path(:history_id =>@history_id, :llink => publication.id, :publication => @publication_id), :method => :post %><%end%></li>
           </ul>
         </div>
       </div>
     <% end %>
   </tbody>
 </table>
-
-<%= link_to 'Edit', edit_history_path(@history) %> |
-<%= link_to 'Back', histories_path %>

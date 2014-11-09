@@ -1,5 +1,9 @@
 <div class="row">
   <h1>Multiverso</h1>
+  <p><strong>Ultimas Historias: </strong>
+<% @histories.each do |history| %>
+<%= link_to "Historia # #{history.id}", history_path(history) %>
+<%end%></p>
   <div class="panel callout radius">
   <p><strong>Historia del mes Biblioteca Karl C. Parrish<strong></p>
   <p><%= @singularity.publication.content %></p>
@@ -14,3 +18,4 @@
 <div class="row">
   <%= paginate @publications %>
 </div>
+

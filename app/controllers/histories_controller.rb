@@ -7,16 +7,7 @@ class HistoriesController < ApplicationController
   end
 
   def show
-    if(user_signed_in?)
-      @signed = true
-    else
-      @signed = false
-    end
-    @p_and_h= PublicationsAndHistory.find_all_by_history_id @history.id
-    @publications = Array.new()
-    @p_and_h.each do |publ|
-      @publications.push(Publication.find_by_id publ.publication_id)
-    end
+    @publications = History.publications_from_history(@history)
     respond_with(@history)
   end
 
@@ -26,6 +17,38 @@ class HistoriesController < ApplicationController
   end
 
   def edit
+  end
+
+  def show_history_continuation
+    @publication_id = params[:publication_id]
+    @history_id = params[:history_id]
+    @histories = History.histories_without_publication(@publication_id)
+
+    if(@history_id == nil)
+      @history_id = @histories[0].id
+    end
+
+    @publications = History.publications_from_history(History.find_by_id @history_id)
+  end
+
+  def continue_with_posted_publication
+    @history_id = params[:history_id]
+    @llink = params[:llink]
+    @publication_id = params[:publication]
+    actual_history_id=Publication.create_publications_and_histories(@history_id,@llink,@publication_id)
+    redirect_to history_url(actual_history_id)
+  end
+
+  def show_history_include_publication
+    @publication_id = params[:publication_id]
+    @history_id = params[:history_id]
+    @histories = History.histories_with_publication(@publication_id)
+
+    if(@history_id == nil)
+      @history_id = @histories[0].id
+    end
+
+    @publications = History.publications_from_history(History.find_by_id @history_id)
   end
 
   def create

@@ -4,12 +4,17 @@ class PublicationsController < ApplicationController
 
   def index
     @publications = Publication.order("updated_at desc").page(params[:page]).per(15)
+    @histories = History.order('id DESC').limit(5)
     @singularity = History.first
     respond_with(@publications)
   end
 
   def show
     respond_with(@publication)
+  end
+
+  def singularities
+    @publications = Publication.find_all_by_singularity true
   end
 
   def continue_publication
@@ -28,7 +33,11 @@ class PublicationsController < ApplicationController
     @llink = params[:llink]
     Publication.create_publications_and_histories(@history_id,@llink,@publication.id)
     respond_with(@publication)
-  
+  end
+
+  def search
+    search_params = params[:search]
+    @publications = Publication.where("content LIKE ? OR url LIKE ?","%#{search_params}%","%#{search_params}%")
   end
 
   def new
@@ -58,6 +67,7 @@ class PublicationsController < ApplicationController
   end
 
   def destroy
+    Publication.delete_from_p_h(@publication)
     @publication.destroy
     respond_with(@publication)
   end
