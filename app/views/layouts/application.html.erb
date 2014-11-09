@@ -43,11 +43,13 @@
           <li class="has-form">
             <div class="row collapse">
               <div class="large-8 small-9 columns">
-                <input type="text" placeholder="Ejemplo: Drama">
+                <%= form_tag(search_path, :method=>'get', :multipart => true) do %>
+                <%= text_field_tag :search, params[:search], placeholder: "Ejemplo: Drama" %>
               </div>
               <div class="large-4 small-3 columns">
-                <a href="#" class="button">Buscar</a>
+                <button class="button" type="submit">Buscar</button>
               </div>
+              <% end %>
             </div>
           </li>
         </ul>

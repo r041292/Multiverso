@@ -30,6 +30,11 @@ class PublicationsController < ApplicationController
     respond_with(@publication)
   end
 
+  def search
+    search_params = params[:search]
+    @publications = Publication.where("content LIKE ? OR url LIKE ?","%#{search_params}%","%#{search_params}%")
+  end
+
   def new
     @publication = Publication.new
     respond_with(@publication)
