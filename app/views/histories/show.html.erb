@@ -1,15 +1,26 @@
 <p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Publication:</strong>
-  <%= @history.publication_id %>
-</p>
-
-<tbody>
-    <% @publications.each do |publ| %>
-      <tr>
-      	<td><%= publ.content %><% if @signed %> <%= link_to ' Continuar', continue_publication_path(:history_id =>@history.id, :llink => publ.id) %><%end%></td><br>
-      </tr>
+<p><strong>Publication:</strong><%= @history.publication_id %></p>
+<table>
+  <tbody>
+    <% @publications.each do |publication| %>
+      <hr>
+    	<div class="row">
+    		<div class="columns large-9 medium-6">
+    			<blockquote>
+    				<% if publication.type != 1 %>
+      			<%= raw publication.url %>
+    				<% else %>
+      			<%= link_to content_tag('h3',publication.content), publication %>
+    				<% end %>
+    				<cite><%= publication.user.name %> - <em><%= time_ago_in_words(publication.created_at) %> ago</em></cite>
+    			</blockquote>
+    	  </div>
+        <div class="columns large-3 medium-6">
+          <ul class="inline-list">
+            <li><% if @signed %> <%= link_to ' Continuar', continue_publication_path(:history_id =>@history.id, :llink => publication.id) %><%end%></li>
+          </ul>
+        </div>
+      </div>
     <% end %>
   </tbody>
 </table>

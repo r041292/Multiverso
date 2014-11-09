@@ -39,6 +39,12 @@ class PublicationsController < ApplicationController
 
   def create
     @publication = Publication.new(publication_params)
+    @publication.user_id = current_user.id
+    if(current_user.admin)
+      @publication.singularity = true
+    else
+      @publication.singularity = false
+    end
     @publication.save
     respond_with(@publication)
   end
