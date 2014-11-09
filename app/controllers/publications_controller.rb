@@ -62,6 +62,7 @@ class PublicationsController < ApplicationController
   end
 
   def destroy
+    Publication.delete_from_p_h(@publication)
     @publication.destroy
     respond_with(@publication)
   end

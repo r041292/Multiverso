@@ -27,6 +27,46 @@ class Publication < ActiveRecord::Base
   end
 end
 
+def self.delete_from_p_h(publication)
+  if(!publication.singularity)
+    @p_and_h = PublicationsAndHistory.find_all_by_publication_id publication.id
+    @p_and_h.each do |publ|
+      publication_llink = Publication.find_by_id publ.llink_id
+      if(!publication_llink.singularity)
+        if(!publ.rlink_id.nil?)
+          temp_llink = PublicationsAndHistory.where("history_id = ? AND publication_id = ?","#{publ.history_id}","#{publ.llink_id}")
+          temp_rlink = PublicationsAndHistory.where("history_id = ? AND publication_id = ?","#{publ.history_id}","#{publ.rlink_id}")
+          temp_llink.rlink_id = publ.rlink_id
+          temp_rlink.llink_id = publ.llink_id
+          temp_llink.save
+          temp_rlink.save
+          PublicationsAndHistory.delete(publ.id)
+        else
+          temp_llink = PublicationsAndHistory.where("history_id = ? AND publication_id = ?","#{publ.history_id}","#{publ.llink_id}")
+          temp_llink.rlink_id =nil
+          temp_llink.save
+          PublicationsAndHistory.delete(publ.id)
+        end
+      else
+        if(!publ.rlink_id.nil?)
+          temp_rlink = PublicationsAndHistory.where("history_id = ? AND publication_id = ?","#{publ.history_id}","#{publ.rlink_id}")
+          temp_rlink.llink_id = publ.llink_id
+          temp_rlink.save
+          PublicationsAndHistory.delete(publ.id)
+        else
+          #borrar todo
+          PublicationsAndHistory.delete_all(["history_id = ?","#{publ.history_id}"])
+          History.delete(publ.history_id)
+        end
+      end
+    end
+  else
+    #si borra singularidad borra todas las historias asociadas y todas las historia-publicacion
+    PublicationsAndHistory.delete_all(["llink_id = ? OR publication_id = ?","#{publication.id}","#{publication.id}"])
+    History.delete_all(["publication_id = ?", "#{publication.id}"])
+  end
+end
+
 def self.create_publications_and_histories(history_id,llink,publication_id)
   inHistory = 0
   if(history_id == "-1")
