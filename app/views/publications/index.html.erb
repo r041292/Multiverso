@@ -14,23 +14,3 @@
 <div class="row">
   <%= paginate @publications %>
 </div>
-
-<script>
-var page= 1;
-function theFunction () {
-  page++;
-  $.ajax({
-      type: 'GET',
-      url: '/more_publications',
-      dataType: 'json',
-      data: { 'page' :page  },
-      success: function(data){
-
-      } 
-    });
-
-
-    }
-
-</script>
-
