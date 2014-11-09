@@ -1,33 +1,30 @@
-
-<h1>Multiverso</h1>
-<p><strong>Historia del mes Biblioteca Karl C. Parrish<strong></p>
-<p><%= @singularity.publication.content %></p>
-<h2>Timeline</h2>
-<% @publications.each do |publication|%>
-  <hr>
-  <div class="row">
-    <div class="columns large-9 medium-6">
-      <blockquote>
-      <% if publication.content == "" %>
-        <%= raw publication.url %>
-      <% else %> 
-        <%= link_to content_tag('h3',publication.content), publication %>
-      <% end %>
-      <cite><%= publication.user.name %> - <em><%= time_ago_in_words(publication.created_at) %> ago</em></cite>
-      </blockquote>
-      
-        
-      
+<div class="row">
+  <h1>Multiverso</h1>
+  <p><strong>Historia del mes Biblioteca Karl C. Parrish<strong></p>
+  <p><%= @singularity.publication.content %></p>
+  <h2>Timeline</h2>
+</div>
+<div id="publications">
+  <% @publications.each do |publication|%>
+    <hr>
+    <div class="row">
+      <div class="columns large-9 medium-6">
+        <blockquote>
+        <% if publication.content == "" %>
+         <%= link_to content_tag('div',"Ver Publicación"), publication %>
+          <%= raw publication.url %>
+        <% else %> 
+          <%= link_to content_tag('h3',publication.content), publication %>
+        <% end %>
+        <cite><%= publication.user.name %> - <em><%= time_ago_in_words(publication.created_at) %> ago</em></cite>
+        </blockquote>  
+      </div>
+      <div class="columns large-3 medium-6">
+        <ul class="inline-list">
+          <li><%= link_to 'Destroy', publication, method: :delete, data: { confirm: 'Are you sure?' } %></li>
+        </ul>
+      </div>
     </div>
+  <% end %>
+</div>
 
-    <div class="columns large-3 medium-6">
-      <ul class="inline-list">
-        <li><%= link_to 'Destroy', publication, method: :delete, data: { confirm: 'Are you sure?' } %></li>
-      </ul>
-    </div>
-  </div>
-<% end %>
-
-<br>
-
-<%= link_to 'New Publication', new_publication_path %>
