@@ -4,6 +4,7 @@ class PublicationsController < ApplicationController
 
   def index
     @publications = Publication.order('id DESC')
+    @histories = History.order('id DESC').limit(5)
     @singularity = History.first
     respond_with(@publications)
   end

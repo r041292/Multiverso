@@ -1,5 +1,10 @@
 
 <h1>Multiverso</h1>
+<p><strong>Ultimas Historias: </strong>
+<% @histories.each do |history| %>
+<%= link_to "Historia # #{history.id}", history_path(history) %>
+<%end%></p>
+
 <p><strong>Historia del mes Biblioteca Karl C. Parrish<strong></p>
 <p><%= @singularity.publication.content %><% if user_signed_in?  %> <%= link_to ' Continuar', continue_publication_path(:history_id =>-1, :llink => @singularity.publication.id) %><%end%></p>
 <h2>Timeline</h2>
