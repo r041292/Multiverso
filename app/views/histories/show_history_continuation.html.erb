@@ -1,0 +1,27 @@
+Barra de historias: <% @histories.each do |history| %>
+<%= link_to history.id, show_history_continuation_path(:history_id => history.id, :publication_id => @publicaction) %>
+<% end %>
+<table>
+  <tbody>
+    <% @publications.each do |publication| %>
+      <hr>
+    	<div class="row">
+    		<div class="columns large-9 medium-6">
+    			<blockquote>
+    				<% if publication.type != 1 %>
+      			<%= raw publication.url %>
+    				<% else %>
+      			<%= link_to content_tag('h3',publication.content), publication %>
+    				<% end %>
+    				<cite><%= publication.user.name %> - <em><%= time_ago_in_words(publication.created_at) %> ago</em></cite>
+    			</blockquote>
+    	  </div>
+        <div class="columns large-3 medium-6">
+          <ul class="inline-list">
+            <li><% if @signed %> <%= link_to ' Continuar', show_history_continuation_continue_with_posted_publication_path(:history_id =>@history, :llink => publication.id, :publication => @publication_id),:method=> :post %><%end%></li>
+          </ul>
+        </div>
+      </div>
+    <% end %>
+  </tbody>
+</table>

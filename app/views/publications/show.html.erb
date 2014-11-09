@@ -1,29 +1,24 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Content:</strong>
-  <%= @publication.content %>
-</p>
+<div class="row">
+    <div class="large-6 large-centered columns">
+       
+       <% if @publication.type >1 %>
+       <center><%= raw @publication.url%></center>
+       <%else%>
+       <center><%= @publication.content %></center>
+       <%end%>
+     <center><cite><%= @publication.user.name %> - <em><%= time_ago_in_words(@publication.created_at) %> ago</em></cite>
+    <%= link_to 'Edit', edit_publication_path(@publication) %> |
+    <%= link_to 'Back', publications_path %></center> | <%= link_to 'Usar como continuacion', :controller =>"histories", :action => "show_history_continuation", :publication_id => @publication.id %>
+    </div>
+</div>
 
-<p>
-  <strong>Url:</strong>
-  <%= @publication.url %>
-</p>
 
-<p>
-  <strong>User:</strong>
-  <%= @publication.user_id%>
-</p>
-
-<p>
-  <strong>Type:</strong>
-  <%= @publication.type %>
-</p>
-
+<!--
 <p>
   <strong>Singularity:</strong>
   <%= @publication.singularity %>
-</p>
+</p>-->
 
-<%= link_to 'Edit', edit_publication_path(@publication) %> |
-<%= link_to 'Back', publications_path %>
+
