@@ -10,7 +10,8 @@
        <%end%>
      <center><cite><%= @publication.user.name %> - <em><%= time_ago_in_words(@publication.created_at) %> ago</em></cite>
     <%= link_to 'Edit', edit_publication_path(@publication) %> |
-    <%= link_to 'Back', publications_path %></center> | <%= link_to 'Usar como continuacion', :controller =>"histories", :action => "show_history_continuation", :publication_id => @publication.id %>
+    <%= link_to 'Back', publications_path %></center>
+    <% if user_signed_in? %> | <%= link_to 'Usar como continuacion', :controller =>"histories", :action => "show_history_continuation", :publication_id => @publication.id %><%end%>
     </div>
 </div>
 

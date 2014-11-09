@@ -1,5 +1,5 @@
 <p id="notice"><%= notice %></p>
-<p><strong>Publication:</strong><%= @history.publication_id %></p>
+<p><strong>Historia numero: </strong><%= @history.id %></p>
 <table>
   <tbody>
     <% @publications.each do |publication| %>
@@ -17,7 +17,7 @@
     	  </div>
         <div class="columns large-3 medium-6">
           <ul class="inline-list">
-            <li><% if @signed %> <%= link_to ' Continuar', continue_publication_path(:history_id =>@history.id, :llink => publication.id) %><%end%></li>
+            <li><% if user_signed_in?  %> <%= link_to ' Continuar', continue_publication_path(:history_id =>@history.id, :llink => publication.id) %><%end%></li>
           </ul>
         </div>
       </div>

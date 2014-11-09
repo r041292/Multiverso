@@ -27,47 +27,63 @@ class Publication < ActiveRecord::Base
   end
 end
 
-  def self.create_publications_and_histories(history_id,llink,publication_id)
-
-  	@p_and_h= PublicationsAndHistory.where("history_id = #{history_id} AND publication_id = #{llink}")
-  	@p_and_h.each do |publ|
-  		if publ.rlink_id == nil
-  			publ.rlink_id = publication_id
-  			publ.save
-  			@n_ph = PublicationsAndHistory.new
-  			@n_ph.llink_id = llink
-  			@n_ph.publication_id = publication_id
-  			@n_ph.history_id = history_id
-  			@n_ph.save
-  		else
-  			puts "its not nill i must create a new history omg with publication #{publication_id}"
-  			@n_history= History.new
-  			@temp_history = History.find(history_id)
-  			@n_history.publication_id = @temp_history.publication_id
-  			@n_history.save
-  			@n_ph= PublicationsAndHistory.where("history_id = #{history_id}")
-  			@n_ph.each do |posts|
-  			@temp_ph = PublicationsAndHistory.new
-  			@temp_ph.history_id = @n_history.id
-  				if(posts.publication_id == Integer(llink))
-  					@temp_ph.llink_id = posts.llink_id
-  					@temp_ph.publication_id = posts.publication_id
-  					@temp_ph.rlink_id = publication_id
-  					@temp_ph.save
-  					@temp_ph = PublicationsAndHistory.new
-  					@temp_ph.llink_id = llink
-  					@temp_ph.publication_id = publication_id
-  					@temp_ph.history_id = @n_history.id
-  					@temp_ph.save
-  					break
-  				else
-  					@temp_ph.rlink_id = posts.rlink_id
-  					@temp_ph.llink_id = posts.llink_id
-  					@temp_ph.publication_id = posts.publication_id
-  					@temp_ph.save
-  				end
-  			end
-  		end
-  	end
+def self.create_publications_and_histories(history_id,llink,publication_id)
+  inHistory = 0
+  if(history_id == "-1")
+    @n_history= History.new
+    @n_history.publication_id = llink
+    @n_history.save
+    @n_ph = PublicationsAndHistory.new
+    @n_ph.llink_id = llink
+    @n_ph.publication_id = publication_id
+    @n_ph.history_id = @n_history.id
+    @n_ph.save
+    inHistory = @n_history.id
+  else
+    @p_and_h= PublicationsAndHistory.where("history_id = #{history_id} AND publication_id = #{llink}")
+    @p_and_h.each do |publ|
+      if publ.rlink_id == nil
+        publ.rlink_id = publication_id
+        publ.save
+        @n_ph = PublicationsAndHistory.new
+        @n_ph.llink_id = llink
+        @n_ph.publication_id = publication_id
+        @n_ph.history_id = history_id
+        inHistory = history_id
+        @n_ph.save
+      else
+        puts "its not nill i must create a new history omg with publication #{publication_id}"
+        @n_history= History.new
+        @temp_history = History.find(history_id)
+        @n_history.publication_id = @temp_history.publication_id
+        @n_history.save
+        inHistory = @n_history.id
+        @n_ph= PublicationsAndHistory.where("history_id = #{history_id}")
+        @n_ph.each do |posts|
+          @temp_ph = PublicationsAndHistory.new
+          @temp_ph.history_id = @n_history.id
+          if(posts.publication_id == Integer(llink))
+            @temp_ph.llink_id = posts.llink_id
+            @temp_ph.publication_id = posts.publication_id
+            @temp_ph.rlink_id = publication_id
+            @temp_ph.save
+            @temp_ph = PublicationsAndHistory.new
+            @temp_ph.llink_id = llink
+            @temp_ph.publication_id = publication_id
+            @temp_ph.history_id = @n_history.id
+            @temp_ph.save
+            break
+          else
+            @temp_ph.rlink_id = posts.rlink_id
+            @temp_ph.llink_id = posts.llink_id
+            @temp_ph.publication_id = posts.publication_id
+            @temp_ph.save
+          end
+        end
+      end
+    end
   end
+  return inHistory
+end
+
 end
