@@ -18,7 +18,7 @@ Barra de historias: <% @histories.each do |history| %>
     	  </div>
         <div class="columns large-3 medium-6">
           <ul class="inline-list">
-            <li><% if user_signed_in? %> <%= link_to ' Continuar', show_history_continuation_continue_with_posted_publication_path(:history_id =>@history, :llink => publication.id, :publication => @publication_id), :method => :post %><%end%></li>
+            <li><% if user_signed_in? %> <%= link_to ' Continuar', show_history_continuation_continue_with_posted_publication_path(:history_id =>@history_id, :llink => publication.id, :publication => @publication_id), :method => :post %><%end%></li>
           </ul>
         </div>
       </div>

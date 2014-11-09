@@ -7,6 +7,7 @@ Multiverso::Application.routes.draw do
   get "/search" => "publications#search"
   get "/show_history_continuation" => "histories#show_history_continuation"
   post "/show_history_continuation/continue_with_posted_publication" => "histories#continue_with_posted_publication"
+  get "/show_history_include_publication" => "histories#show_history_include_publication"
 
   devise_for :users, :controllers => { omniauth_callbacks: 'omniauth_callbacks' }
 

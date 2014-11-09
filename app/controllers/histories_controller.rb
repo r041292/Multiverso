@@ -39,6 +39,18 @@ class HistoriesController < ApplicationController
     redirect_to history_url(actual_history_id)
   end
 
+  def show_history_include_publication
+    @publication_id = params[:publication_id]
+    @history_id = params[:history_id]
+    @histories = History.histories_with_publication(@publication_id)
+
+    if(@history_id == nil)
+      @history_id = @histories[0].id
+    end
+
+    @publications = History.publications_from_history(History.find_by_id @history_id)
+  end
+
   def create
     @history = History.new(history_params)
     @history.save
