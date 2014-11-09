@@ -9,7 +9,7 @@
        <center><%= @publication.content %></center>
        <%end%>
      <center><cite><%= @publication.user.name %> - <em><%= time_ago_in_words(@publication.created_at) %> ago</em></cite><br>
-     <%= link_to 'Tambien en', show_history_include_publication_path(:publication_id => @publication.id) %><% if user_signed_in? and !@publication.singularity %> | <%= link_to 'Usar como continuacion', :controller =>"histories", :action => "show_history_continuation", :publication_id => @publication.id %> <%if current_user.admin %> | <%= link_to 'Edit', edit_publication_path(@publication) %> | <%= link_to 'Destroy', @publication, method: :delete, data: { confirm: 'Are you sure?' } %><%end%> <%end%>
+     <%= link_to 'Tambien en', show_history_include_publication_path(:publication_id => @publication.id) %><% if user_signed_in? and !@publication.singularity %> | <%= link_to 'Usar como continuacion', :controller =>"histories", :action => "show_history_continuation", :publication_id => @publication.id %><%end%><%if user_signed_in? %> <%if current_user.admin %> | <%= link_to 'Edit', edit_publication_path(@publication) %> | <%= link_to 'Destroy', @publication, method: :delete, data: { confirm: 'Are you sure?' } %><%end%> <%end%>
     </center>
     </div>
 </div>
