@@ -1,0 +1,22 @@
+<h2>Singularidades</h2>
+<% @publications.each do |publication|%>
+  <hr>
+  <div class="row">
+    <div class="columns large-9 medium-6">
+      <blockquote>
+      <% if publication.content == "" %>
+        <%= raw publication.url %>
+      <% else %> 
+        <%= link_to content_tag('h3',publication.content), publication %>
+      <% end %>
+      <cite><%= publication.user.name %> - <em><%= link_to time_ago_in_words(publication.created_at), publication %> ago</em></cite>
+      </blockquote>
+    </div>
+
+    <div class="columns large-3 medium-6">
+      <ul class="inline-list">
+        <% if user_signed_in?  %><li><%= link_to ' Continuar', continue_publication_path(:history_id =>-1, :llink => publication.id) %><% if current_user.admin  %> | <%= link_to 'Destroy', publication, method: :delete, data: { confirm: 'Are you sure?' } %></li><%end%><%end%>
+      </ul>
+    </div>
+  </div>
+<% end %>

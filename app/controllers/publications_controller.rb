@@ -13,6 +13,10 @@ class PublicationsController < ApplicationController
     respond_with(@publication)
   end
 
+  def singularities
+    @publications = Publication.find_all_by_singularity true
+  end
+
   def continue_publication
     @history_id = params[:history_id]
     @llink = params[:llink]
