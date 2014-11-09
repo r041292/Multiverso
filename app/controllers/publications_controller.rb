@@ -3,7 +3,7 @@ class PublicationsController < ApplicationController
    respond_to :html, :xml, :json
 
   def index
-    @publications = Publication.all
+    @publications = Publication.order('id DESC')
     @singularity = History.first
     respond_with(@publications)
   end
