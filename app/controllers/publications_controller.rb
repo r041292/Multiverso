@@ -21,6 +21,8 @@ class PublicationsController < ApplicationController
 
   def create_continue_publication
     @publication = Publication.new(publication_params)
+    @publication.user_id = current_user.id
+    @publication.singularity = false
     @publication.save
     @history_id = params[:history_id]
     @llink = params[:llink]
