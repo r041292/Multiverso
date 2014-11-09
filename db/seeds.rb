@@ -1,5 +1,4 @@
-
-# ruby encoding: utf-8
+#encoding: utf-8
 
 ipaddr1 = IPAddr.new "127.0.0.1/24"
 user_list = [
@@ -62,7 +61,6 @@ histories_list = [
 histories_list.each do | publication_id|
 	History.create(publication_id: publication_id)
 end
-
 
 h_and_p_list = [
 	[1,1,7,5],[1,5,9,7],[1,7,12,9],[1,9,15,12],[1,12,nil,15],
