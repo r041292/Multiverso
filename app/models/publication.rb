@@ -4,6 +4,29 @@ class Publication < ActiveRecord::Base
   has_many :publications_and_histories
   self.inheritance_column = nil
 
+
+ before_save do
+  if self.type == 2
+    if self.url.match(/\b658px\b/)
+      self.url["658"]="300"
+    end
+  end
+  if self.type==3
+    if self.url.match(/\b600\b/) 
+      self.url["600"]= "300"
+      self.url["600"]= "300"
+    end
+    if self.url.match(/\b480\b/)
+      self.url["480"]= "300"
+      self.url["480"]= "300"
+    end
+    if self.url.match(/\b320\b/)
+      self.url["320"]= "300"
+      self.url["320"]= "300"
+    end
+  end
+end
+
   def self.create_publications_and_histories(history_id,llink,publication_id)
 
   	@p_and_h= PublicationsAndHistory.where("history_id = #{history_id} AND publication_id = #{llink}")

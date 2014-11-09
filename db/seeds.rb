@@ -62,7 +62,7 @@ histories_list.each do | publication_id|
 	History.create(publication_id: publication_id)
 end
 
-32
+
 h_and_p_list = [
 	[1,1,7,5],[1,5,9,7],[1,7,12,9],[1,9,15,12],[1,12,nil,15],
 	[2,2,8,6],[2,6,11,8],[2,8,nil,11],

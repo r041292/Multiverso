@@ -3,7 +3,7 @@ class PublicationsController < ApplicationController
    respond_to :html, :xml, :json
 
   def index
-    @publications = Publication.all
+    @publications = Publication.order('id DESC')
     @singularity = History.first
     respond_with(@publications)
   end
@@ -28,7 +28,7 @@ class PublicationsController < ApplicationController
 
     @history_id = params[:history_id]
     @llink = params[:llink]
-    Publication.create_publications_and_histories(@history_id,@llink,@publication.id)
+    #Publication.create_publications_and_histories(@history_id,@llink,@publication.id)
     respond_with(@publication)
   end
 
