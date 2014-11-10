@@ -10,6 +10,7 @@ class PublicationsController < ApplicationController
   end
 
   def show
+    puts @publication.stories_which_belongs
     respond_with(@publication)
   end
 

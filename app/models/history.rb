@@ -27,16 +27,5 @@ class History < ActiveRecord::Base
 
   end
 
-  def self.histories_with_publication(publication_id)
-    histories_to_include = Array.new()
-    p_and_h = PublicationsAndHistory.where("publication_id = ? OR llink_id = ? OR rlink_id = ?","#{publication_id}","#{publication_id}","#{publication_id}")
-    p_and_h.each do |post|
-      if(!histories_to_include.include? post.history)
-        histories_to_include.push(post.history)
-      end
-    end
-    return histories_to_include
-    
-  end
 
 end

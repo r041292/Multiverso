@@ -67,6 +67,12 @@ def self.delete_from_p_h(publication)
   end
 end
 
+def stories_which_belongs
+ PublicationsAndHistory.where("publication_id = #{self.id}")
+end
+
+
+
 def self.create_publications_and_histories(history_id,llink,publication_id)
   inHistory = 0
   if(history_id == "-1")
