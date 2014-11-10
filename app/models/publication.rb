@@ -31,8 +31,7 @@ def self.delete_from_p_h(publication)
   if(!publication.singularity)
     @p_and_h = PublicationsAndHistory.find_all_by_publication_id publication.id
     @p_and_h.each do |publ|
-      publication_llink = Publication.find_by_id publ.llink_id
-      if(!publication_llink.singularity)
+      publication = Publication.find_by_id publ.publication_id
         if(!publ.rlink_id.nil?)
           temp_llink = PublicationsAndHistory.where("history_id = ? AND publication_id = ?","#{publ.history_id}","#{publ.llink_id}")
           temp_rlink = PublicationsAndHistory.where("history_id = ? AND publication_id = ?","#{publ.history_id}","#{publ.rlink_id}")
@@ -47,19 +46,7 @@ def self.delete_from_p_h(publication)
           temp_llink[0].save
           PublicationsAndHistory.delete(publ.id)
         end
-      else
-        if(!publ.rlink_id.nil?)
-          temp_rlink = PublicationsAndHistory.where("history_id = ? AND publication_id = ?","#{publ.history_id}","#{publ.rlink_id}")
-          temp_rlink[0].llink_id = publ.llink_id
-          temp_rlink[0].save
-          PublicationsAndHistory.delete(publ.id)
-        else
-          #borrar todo
-          PublicationsAndHistory.delete_all(["history_id = ?","#{publ.history_id}"])
-          History.delete(publ.history_id)
-        end
       end
-    end
   else
     #si borra singularidad borra todas las historias asociadas y todas las historia-publicacion
     PublicationsAndHistory.delete_all(["llink_id = ? OR publication_id = ?","#{publication.id}","#{publication.id}"])
@@ -80,10 +67,15 @@ def self.create_publications_and_histories(history_id,llink,publication_id)
     @n_history.publication_id = llink
     @n_history.save
     @n_ph = PublicationsAndHistory.new
-    @n_ph.llink_id = llink
-    @n_ph.publication_id = publication_id
+    @n_ph.publication_id = llink
     @n_ph.history_id = @n_history.id
+    @n_ph2 = PublicationsAndHistory.new
+    @n_ph2.llink_id = llink
+    @n_ph2.publication_id = publication_id
+    @n_ph2.history_id = @n_history.id
+    @n_ph.rlink_id=publication_id
     @n_ph.save
+    @n_ph2.save
     inHistory = @n_history.id
   else
     @p_and_h= PublicationsAndHistory.where("history_id = #{history_id} AND publication_id = #{llink}")

@@ -5,7 +5,7 @@ class History < ActiveRecord::Base
   def self.publications_from_history(history)
 	p_and_h= PublicationsAndHistory.find_all_by_history_id history.id
     publications = Array.new()
-    publications.push(Publication.find_by_id p_and_h[0].llink_id)
+    #publications.push(Publication.find_by_id p_and_h[0].llink_id)
     p_and_h.each do |publ|
       publications.push(Publication.find_by_id publ.publication_id)
     end
