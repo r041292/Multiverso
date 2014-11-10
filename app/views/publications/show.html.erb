@@ -9,13 +9,13 @@
       <%end%>
       <center><cite><%= @publication.user.name %> - <em><%= time_ago_in_words(@publication.created_at) %> ago</em></cite><br>
         <% if !@publication.singularity %> 
-          <%= link_to 'Úsala en tu historia!', :controller =>"histories", :action => "show_history_continuation", :publication_id => @publication.id %>
+          <%= link_to 'Úsala en otra historia!', :controller =>"histories", :action => "show_history_continuation", :publication_id => @publication.id %>
         <%end%>
       </center>
       Ver también en:
       <ul class="breadcrumbs">
         <%@publication.stories_which_belongs.each do |history|%>
-          <li><a href="<%=history%>">Historia <%= history.id%></a></li>
+          <li><a href="/histories/<%=history.history_id%>">Historia <%= history.history_id%></a></li>
         <% end %>
       </ul>
     </div>
