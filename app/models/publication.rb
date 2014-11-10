@@ -74,10 +74,15 @@ def self.create_publications_and_histories(history_id,llink,publication_id)
     @n_history.publication_id = llink
     @n_history.save
     @n_ph = PublicationsAndHistory.new
-    @n_ph.llink_id = llink
-    @n_ph.publication_id = publication_id
+    @n_ph.publication_id = llink
     @n_ph.history_id = @n_history.id
+    @n_ph2 = PublicationsAndHistory.new
+    @n_ph2.llink_id = llink
+    @n_ph2.publication_id = publication_id
+    @n_ph2.history_id = @n_history.id
+    @n_ph.rlink_id=publication_id
     @n_ph.save
+    @n_ph2.save
     inHistory = @n_history.id
   else
     @p_and_h= PublicationsAndHistory.where("history_id = #{history_id} AND publication_id = #{llink}")
