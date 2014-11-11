@@ -63,6 +63,7 @@ class HistoriesController < ApplicationController
   end
 
   def destroy
+    PublicationsAndHistory.delete_all(["history_id = ?","#{@history.id}"])
     @history.destroy
     respond_with(@history)
   end
