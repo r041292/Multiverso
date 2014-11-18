@@ -9,8 +9,6 @@ gem 'pg'
 # Use devise for user authentication
 gem 'devise','~>3.4.0'
 
-# Use cancan for user roles
-gem 'cancan', '~>1.6.10'
 
 # Use omniauth for socialnetwork authentication
 gem 'omniauth'

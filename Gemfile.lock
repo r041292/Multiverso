@@ -160,7 +160,7 @@ PLATFORMS
   x86-mingw32
 
 DEPENDENCIES
-  cancan (~> 1.6.10)
+  cancan
   certified
   coffee-rails (~> 4.0.0)
   devise (~> 3.4.0)

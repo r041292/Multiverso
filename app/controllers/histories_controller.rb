@@ -12,11 +12,18 @@ class HistoriesController < ApplicationController
   end
 
   def new
-    @history = History.new
-    respond_with(@history)
+    if user_signed_in?
+      @history = History.new
+      respond_with(@history)
+    else
+      redirect_to root_path
+    end
   end
 
   def edit
+    unless user_signed_in?
+      redirect_to root_path
+    end
   end
 
   def show_history_continuation

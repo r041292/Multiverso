@@ -1,10 +1,10 @@
-<h1>Listing histories</h1>
+<h1></h1>
 
 <table>
   <thead>
     <tr>
-      <th>Publication</th>
-      <th></th>
+      <th>Singularidad</th>
+      <th>Fecha</th>
       <th></th>
       <th></th>
     </tr>
@@ -13,15 +13,15 @@
   <tbody>
     <% @histories.each do |history| %>
       <tr>
-        <td><%= history.publication_id %></td>
-        <td><%= link_to 'Show', history %></td>
-        <td><%= link_to 'Edit', edit_history_path(history) %></td>
-        <td><%= link_to 'Destroy', history, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= truncate(history.publication.content,length: 100) %></td>
+        <td><%= history.created_at.to_formatted_s(:short) %></td>
+        <td><%= link_to 'Ver Historia', history %></td>
+        <% if user_signed_in? && current_user.admin?%>
+          <td><%= link_to 'Destroy', history, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
       </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
-
-<%= link_to 'New History', new_history_path %>

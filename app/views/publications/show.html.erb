@@ -8,7 +8,7 @@
         <center><p><h3><%= @publication.content %></h3></p></center>
       <%end%>
       <center><cite><%= @publication.user.name %> - <em><%= time_ago_in_words(@publication.created_at) %> ago</em></cite><br>
-        <% if !@publication.singularity %> 
+        <% if !@publication.singularity && user_signed_in? %> 
           <%= link_to 'Úsala en otra historia!', :controller =>"histories", :action => "show_history_continuation", :publication_id => @publication.id %>
         <%end%>
       </center>
