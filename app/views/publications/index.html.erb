@@ -7,6 +7,8 @@
   <div class="panel callout radius">
   <p><strong>Historia del mes Biblioteca Karl C. Parrish<strong></p>
   <p><%= @singularity.publication.content %></p>
+
+  <% if user_signed_in?  %> <%= link_to 'Crea tu propia historia!', continue_publication_path(:history_id =>"-1", :llink => @singularity.id) %><%end%>
 </div>
   
   <h2>Timeline</h2>

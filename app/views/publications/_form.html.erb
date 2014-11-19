@@ -1,4 +1,3 @@
-<%= javascript_include_tag "hide_content_url" %>
 <%= form_for(@publication) do |f| %>
   <% if @publication.errors.any? %>
     <div id="error_explanation">
@@ -31,4 +30,6 @@
 
   </div>
 <% end %>
+
+<%= javascript_include_tag "hide_content_url" %>
 
