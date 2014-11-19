@@ -15,18 +15,19 @@ end
 
 
 publications_list = [
- [ "1Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris risus orci, interdum sed maximus in, feugiat sit amet nulla. Maecenas nec ligula eget diam congue interdum ut et ligula. Sed massa nunc.",'',1,1,true],
- [ "2Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris risus orci, interdum sed maximus in, feugiat sit amet nulla. Maecenas nec ligula eget diam congue interdum ut et ligula. Sed massa nunc.",'',2,1,true],
- [ "3Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris risus orci, interdum sed maximus in, feugiat sit amet nulla. Maecenas nec ligula eget diam congue interdum ut et ligula. Sed massa nunc.",'',1,1,true],
- [ "4Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris risus orci, interdum sed maximus in, feugiat sit amet nulla. Maecenas nec ligula eget diam congue interdum ut et ligula. Sed massa nunc.",'',2,1,true],
- [ "5Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris risus orci, interdum sed maximus in, feugiat sit amet nulla. Maecenas nec ligula eget diam congue interdum ut et ligula. Sed massa nunc.",'',1,1,false],
- [ "6Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris risus orci, interdum sed maximus in, feugiat sit amet nulla. Maecenas nec ligula eget diam congue interdum ut et ligula. Sed massa nunc.",'',2,1,true],
- [ "7Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris risus orci, interdum sed maximus in, feugiat sit amet nulla. Maecenas nec ligula eget diam congue interdum ut et ligula. Sed massa nunc.",'',1,1,false],
- [ "8Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris risus orci, interdum sed maximus in, feugiat sit amet nulla. Maecenas nec ligula eget diam congue interdum ut et ligula. Sed massa nunc.",'',2,1,true],
- [ "9Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris risus orci, interdum sed maximus in, feugiat sit amet nulla. Maecenas nec ligula eget diam congue interdum ut et ligula. Sed massa nunc.",'',2,1,true],
- [ "10Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris risus orci, interdum sed maximus in, feugiat sit amet nulla. Maecenas nec ligula eget diam congue interdum ut et ligula. Sed massa nunc.",'',1,1,true],
- [ "11Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris risus orci, interdum sed maximus in, feugiat sit amet nulla. Maecenas nec ligula eget diam congue interdum ut et ligula. Sed massa nunc.",'',2,1,false],
- [ "12Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris risus orci, interdum sed maximus in, feugiat sit amet nulla. Maecenas nec ligula eget diam congue interdum ut et ligula. Sed massa nunc.",'',1,1,true],
+ [ "Erase un principito que no quería estudiar. Cierta noche, después de haber recibido una buena regañina por su pereza, suspiro tristemente, diciendo:",'',1,1,true],
+ [ "¡Ay! ¿Cuándo seré mayor para hacer lo que me apetezca? Y he aquí que, a la mañana siguiente, descubrió sobre su cama una bobina de hilo de oro de la que salió una débil voz: Trátame con cuidado, príncipe.",'',2,1,true],
+ [ "Este hilo representa tus días. Conforme vayan pasando, el hilo se ira soltando. Sé que deseas crecer pronto... Pues bien, te concedo el don de desenrollar el hilo a tu antojo, pero todo aquello que hayas desenrollado no podrás ovillarlo.",'',1,1,true],
+ [ "El príncipe, para cerciorarse, tiro con ímpetu del hilo y se encontró convertido en un apuesto príncipe. Tiro un poco mas y se vio llevando la corona de su padre. ¡Era rey! Con un nuevo tironcito, dijo:Bobina ¿Cómo serán mi esposa e hijos?",'',2,1,true],
+ [ "En el mismo instante, una bellísima joven, y cuatro niños rubios surgieron a su lado. Sin pararse a pensar, su curiosidad se iba apoderando de él y siguió soltando mas hilo para saber como serian sus hijos de mayores.",'',1,1,false],
+ [ "De pronto se miro al espejo y vio la imagen de un anciano decrépito, de escasos cabellos nevados. Se asusto del poco hilo que quedaba en la bobina. ¡Los instantes de su vida estaban contados! rapidamente, intento enrollarlo, pero sin lograrlo.",'',2,1,true],
+ [ "Has desperdiciado tontamente tu existencia. Ahora ya sabes que los días perdidos no pueden recuperarse. Has sido un perezoso al pretender pasar por la vida sin molestarte en hacer el trabajo de todos los días. Sufre, pues tu castigo.",'',1,1,false],
+ [ "El rey, tras un grito de pánico, cayó muerto: había consumido la existencia sin hacer nada de provecho.",'',2,1,true],
+ [ "Había dejado de nevar y los niños, ansiosos de libertad, salieron de casa y empezaron a corretear por la blanca y mullida alfombra recién formada.",'',2,1,true],
+ [ "La hija del herrero, tomando puñados de nieve con sus manitas hábiles, se entrego a la tarea de moldearla. Haré un muñeco como el hermanito que hubiera deseado tener se dijo.",'',1,1,true],
+ [ "Le salio un niñito precioso, redondo, con ojos de carbón y un botón rojo por boca. La pequeña estaba entusiasmada con su obra y convirtió al muñeco en su inseparable compañero durante los tristes días de aquel invierno. Le hablaba, le mimaba...",'',2,1,false],
+ [ "Pero pronto los días empezaron a ser mas largos y los rayos de sol mas calidos... El muñeco se fundió sin dejar mas rastro de su existencia que un charquito con dos carbones y un botón rojo. La niña lloro con desconsuelo.",'',1,1,true],
+ ["Un viejecito, que buscaba en el sol tibieza para su invierno, le dijo dulcemente: Seca tus lagrimas, bonita, por que acabas de recibir una gran lección: ahora ya sabes que no debe ponerse el corazón en cosas perecederas.",'',2,1,false],
  ["",'<iframe class="vine-embed" src="https://vine.co/v/M7MFlunmLJ5/embed/simple" width="600" height="600" frameborder="0"></iframe><script async src="//platform.vine.co/static/scripts/embed.js" charset="utf-8"></script>',1,3,false],
  ["",'<iframe class="vine-embed" src="https://vine.co/v/hlvnwTLrqvw/embed/simple" width="600" height="600" frameborder="0"></iframe><script async src="//platform.vine.co/static/scripts/embed.js" charset="utf-8"></script>',2,3,true],
  ["",'<iframe class="vine-embed" src="https://vine.co/v/OeEvtlHQhKY/embed/simple" width="600" height="600" frameborder="0"></iframe><script async src="//platform.vine.co/static/scripts/embed.js" charset="utf-8"></script>',2,3,true],
@@ -48,18 +49,18 @@ publications_list = [
 ["",'<blockquote class="instagram-media" data-instgrm-captioned data-instgrm-version="4" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:50% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAAGFBMVEUiIiI9PT0eHh4gIB4hIBkcHBwcHBwcHBydr+JQAAAACHRSTlMABA4YHyQsM5jtaMwAAADfSURBVDjL7ZVBEgMhCAQBAf//42xcNbpAqakcM0ftUmFAAIBE81IqBJdS3lS6zs3bIpB9WED3YYXFPmHRfT8sgyrCP1x8uEUxLMzNWElFOYCV6mHWWwMzdPEKHlhLw7NWJqkHc4uIZphavDzA2JPzUDsBZziNae2S6owH8xPmX8G7zzgKEOPUoYHvGz1TBCxMkd3kwNVbU0gKHkx+iZILf77IofhrY1nYFnB/lQPb79drWOyJVa/DAvg9B/rLB4cC+Nqgdz/TvBbBnr6GBReqn/nRmDgaQEej7WhonozjF+Y2I/fZou/qAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div></div> <p style=" margin:8px 0 0 0; padding:0 4px;"> <a href="https://instagram.com/p/s5TzWzpBRr/" style=" color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;" target="_top">Bazurtooo @trucupeydisco</a></p> <p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;">A video posted by Laura Garcia (@laucasadiego) on <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2014-09-13T18:18:07+00:00">Sep 9, 2014 at 11:18am PDT</time></p></div></blockquote><script async defer src="//platform.instagram.com/en_US/embeds.js"></script>',2,2,false],
 ["",'<blockquote class="instagram-media" data-instgrm-captioned data-instgrm-version="4" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:50% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAAGFBMVEUiIiI9PT0eHh4gIB4hIBkcHBwcHBwcHBydr+JQAAAACHRSTlMABA4YHyQsM5jtaMwAAADfSURBVDjL7ZVBEgMhCAQBAf//42xcNbpAqakcM0ftUmFAAIBE81IqBJdS3lS6zs3bIpB9WED3YYXFPmHRfT8sgyrCP1x8uEUxLMzNWElFOYCV6mHWWwMzdPEKHlhLw7NWJqkHc4uIZphavDzA2JPzUDsBZziNae2S6owH8xPmX8G7zzgKEOPUoYHvGz1TBCxMkd3kwNVbU0gKHkx+iZILf77IofhrY1nYFnB/lQPb79drWOyJVa/DAvg9B/rLB4cC+Nqgdz/TvBbBnr6GBReqn/nRmDgaQEej7WhonozjF+Y2I/fZou/qAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div></div> <p style=" margin:8px 0 0 0; padding:0 4px;"> <a href="https://instagram.com/p/o1oAe8JBcu/" style=" color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;" target="_top">#Felicidad</a></p> <p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;">A photo posted by Laura Garcia (@laucasadiego) on <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2014-06-04T21:52:08+00:00">Jun 6, 2014 at 2:52pm PDT</time></p></div></blockquote><script async defer src="//platform.instagram.com/en_US/embeds.js"></script>',2,2,false],
 ["",'<blockquote class="instagram-media" data-instgrm-version="4" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:50% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAAGFBMVEUiIiI9PT0eHh4gIB4hIBkcHBwcHBwcHBydr+JQAAAACHRSTlMABA4YHyQsM5jtaMwAAADfSURBVDjL7ZVBEgMhCAQBAf//42xcNbpAqakcM0ftUmFAAIBE81IqBJdS3lS6zs3bIpB9WED3YYXFPmHRfT8sgyrCP1x8uEUxLMzNWElFOYCV6mHWWwMzdPEKHlhLw7NWJqkHc4uIZphavDzA2JPzUDsBZziNae2S6owH8xPmX8G7zzgKEOPUoYHvGz1TBCxMkd3kwNVbU0gKHkx+iZILf77IofhrY1nYFnB/lQPb79drWOyJVa/DAvg9B/rLB4cC+Nqgdz/TvBbBnr6GBReqn/nRmDgaQEej7WhonozjF+Y2I/fZou/qAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div></div><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://instagram.com/p/vKb6MVBOOB/" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_top">A photo posted by Estraterrestre Sesy (@estraterrestresesypr)</a> on <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2014-11-09T02:58:49+00:00">Nov 11, 2014 at 6:58pm PST</time></p></div></blockquote><script async defer src="//platform.instagram.com/en_US/embeds.js"></script>',2,2,false],
-[ "13Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris risus orci, interdum sed maximus in, feugiat sit amet nulla. Maecenas nec ligula eget diam congue interdum ut et ligula. Sed massa nunc.",'',1,1,false],
-[ "14Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris risus orci, interdum sed maximus in, feugiat sit amet nulla. Maecenas nec ligula eget diam congue interdum ut et ligula. Sed massa nunc.",'',2,1,false],
-[ "15Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris risus orci, interdum sed maximus in, feugiat sit amet nulla. Maecenas nec ligula eget diam congue interdum ut et ligula. Sed massa nunc.",'',1,1,false],
-[ "16Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris risus orci, interdum sed maximus in, feugiat sit amet nulla. Maecenas nec ligula eget diam congue interdum ut et ligula. Sed massa nunc.",'',2,1,false],
-[ "17Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris risus orci, interdum sed maximus in, feugiat sit amet nulla. Maecenas nec ligula eget diam congue interdum ut et ligula. Sed massa nunc.",'',1,1,false],
-[ "18Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris risus orci, interdum sed maximus in, feugiat sit amet nulla. Maecenas nec ligula eget diam congue interdum ut et ligula. Sed massa nunc.",'',2,1,false],
-[ "19Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris risus orci, interdum sed maximus in, feugiat sit amet nulla. Maecenas nec ligula eget diam congue interdum ut et ligula. Sed massa nunc.",'',1,1,false],
-[ "20Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris risus orci, interdum sed maximus in, feugiat sit amet nulla. Maecenas nec ligula eget diam congue interdum ut et ligula. Sed massa nunc.",'',2,1,false],
-[ "21Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris risus orci, interdum sed maximus in, feugiat sit amet nulla. Maecenas nec ligula eget diam congue interdum ut et ligula. Sed massa nunc.",'',2,1,false],
-[ "22Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris risus orci, interdum sed maximus in, feugiat sit amet nulla. Maecenas nec ligula eget diam congue interdum ut et ligula. Sed massa nunc.",'',1,1,false],
-[ "23Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris risus orci, interdum sed maximus in, feugiat sit amet nulla. Maecenas nec ligula eget diam congue interdum ut et ligula. Sed massa nunc.",'',2,1,false],
-[ "24Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris risus orci, interdum sed maximus in, feugiat sit amet nulla. Maecenas nec ligula eget diam congue interdum ut et ligula. Sed massa nunc.",'',1,1,false]
+[ "Erase una vez un cedro satisfecho de su hermosura.",'',1,1,true],
+[ "Plantado en mitad del jardín, superaba en altura a todos los demás árboles. Tan bellamente dispuestas estaban sus ramas, que parecía un gigantesco candelabro. Si con lo hermoso que soy diera fruto, se dijo, ningún árbol podría compararse conmigo.",'',2,1,false],
+[ "Y decidió observar a los otros árboles y hacer lo mismo con ellos. Por fin, en lo alto de su erguida copa, apunto un bellísimo fruto. Tendré que alimentarlo bien para que crezca mucho, se dijo.",'',1,1,false],
+[ "Tanto y tanto creció aquel fruto, que se hizo demasiado grande. La copa del cedro, no pudiendo sostenerlo, se fue doblando; y cuando el fruto maduro, la copa, que era el orgullo y la gloria del árbol, empezó a tambalearse hasta que se troncho.",'',2,1,false],
+[ " ¡A cuantos hombres, como el cedro, su demasiada ambición les arruina!",'',1,1,false],
+[ "Erase un príncipe muy admirado en su reino. Todas las jóvenes casaderas deseaban tenerle por esposo. Pero el no se fijaba en ninguna y pasaba su tiempo jugando con Zapaquilda, una preciosa gatita, junto a las llamas del hogar.",'',2,1,true],
+[ "Un día, dijo en voz alta: Eres tan cariñosa y adorable que, si fueras mujer, me casaría contigo. En el mismo instante apareció en la estancia el Hada de los Imposibles, que dijo: Príncipe tus deseos se han cumplido",'',1,1,false],
+[ "El joven, deslumbrado, descubrió junto a el a Zapaquilda, convertida en una bellísima muchacha.",'',2,1,false],
+[ "Al día siguiente se celebraban las bodas y todos los nobles y pobres del reino que acudieron al banquete se extasiaron ante la hermosa novia. De pronto, vieron a la joven lanzarse sobre un ratoncillo que estaba por el salón y zampárselo al atraparlo.",'',2,1,false],
+[ "El príncipe llamó al Hada de los Imposibles para que convirtiera a su esposa en la gatita que había sido. Pero el Hada no acudió, y nadie nos ha contado si tuvo que pasarse la vida contemplando como su esposa daba cuenta de los ratones.",'',1,1,false],
+[ "Su extraordinario coraje la salvó a ella y salvó a sus pequeñuelos. Porque nada hay imposible cuando el amor guía las acciones.",'',2,1,true],
+[ "Pero ya era demasiado tarde: los cazadores estaban ante ella, dispuestos a herirla.",'',1,1,false]
 
 ]
 
@@ -68,26 +69,35 @@ publications_list.each do |content, url , user_id, type, singularity|
 end
 
 histories_list = [
-	1, 2, 3, 4, 6, 8, 9, 10, 12, 14, 15, 17
+	[1, "La Bobina Maravillosa"],[9,"El Muñeco de Nieve"],[34,"El Cedro Vanidoso"],
+	[39,"La Gata Encantanda"], [2,"La sepultura del Lobo"], [3,"El Papel y la tinta"], [4,"El nuevo Amigo"],
+	[6,"El honrado leñador"], [8,"El caballo amaestrado"], [10, "La ratita blanca"], [12, "Nuez de Oro"],
+	[14, "La Ostra y el Cangrejo"], [15, "Caperucita y las Aves"],[16,"El granjero bondadoso"], 
+	[17,"La aventura del agua"],[44,"El camino peligroso"],[18, "El viajero extraviado"]
 ]
 
-histories_list.each do | publication_id|
-	History.create(publication_id: publication_id)
+histories_list.each do | publication_id, title|
+	History.create(publication_id: publication_id, title: title)
 end
 
 h_and_p_list = [
-	[1,nil,5,1],[1,1,7,5],[1,5,11,7],[1,7,13,11],[1,11,18,13],[1,13,nil,18],
-	[2,nil,7,2],[2,2,20,7],[2,5,7,20],[2,20,nil,5],
-	[3,nil,19,3],[3,3,21,19],[3,19,24,21],[3,21,28,24],[3,24,nil,28],
-	[4,nil,13,4],[4,4,16,13],[4,13,18,16],[4,16,19,18],[4,18,nil,19],
-	[5,nil,20,6],[5,6,21,20],[5,20,22,21],[5,21,23,22],[5,22,nil,23],
-	[6,nil,25,8],[6,8,26,25],[6,25,27,26],[6,26,29,27],[6,27,nil,29],
-	[7,nil,30,9],[7,9,31,30],[7,30,32,31],[7,31,5,32],[7,32,nil,5],
-	[8,nil,30,10],[8,10,7,30],[8,30,13,7],[8,7,32,13],[8,13,nil,32],
-	[9,nil,24,12],[9,12,22,24],[9,24,30,22],[9,22,16,30],[9,30,nil,16],
-	[10,nil,34,14],[10,14,23,34],[10,34,7,23],[10,23,nil,7],
-	[11,nil,31,15],[11,15,22,31],[11,31,5,22],[11,22,nil,5],
-	[12,nil,13,17],[12,17,31,13],[12,13,nil,31]
+	[1,nil,2,1],[1,1,3,2],[1,2,4,3],[1,3,5,4],[1,4,6,5],[1,5,7,6],[1,6,8,7],[1,7,nil,8],
+	[2,nil,10,9],[2,9,11,10],[2,10,12,11],[2,11,13,12],[2,12,nil,13],
+	[3,nil,35,34],[3,34,36,35],[3,35,37,36],[3,36,38,37],[3,37,nil,38],
+	[4,nil,40,39],[4,39,41,40],[4,40,42,41],[4,41,43,42],[4,42,nil,43],
+	[5,nil,20,2],[5,2,21,20],[5,20,22,21],[5,21,23,22],[5,22,nil,23],
+	[6,nil,25,3],[6,3,26,25],[6,25,27,26],[6,26,29,27],[6,27,nil,29],
+	[7,nil,30,4],[7,4,31,30],[7,30,32,31],[7,31,5,32],[7,32,nil,5],
+	[8,nil,30,6],[8,6,7,30],[8,30,13,7],[8,7,32,13],[8,13,nil,32],
+	[9,nil,24,8],[9,8,22,24],[9,24,30,22],[9,22,16,30],[9,30,nil,16],
+	[10,nil,34,10],[10,10,23,34],[10,34,7,23],[10,23,nil,7],
+	[11,nil,31,12],[11,12,22,31],[11,31,5,22],[11,22,nil,5],
+	[12,nil,13,14],[12,14,31,13],[12,13,nil,31],
+	[13,nil,5,15],[13,15,7,5],[13,5,11,7],[13,7,13,11],[13,11,18,13],[13,13,nil,18],
+	[14,nil,7,16],[14,16,20,7],[14,5,7,20],[14,20,nil,5],
+	[15,nil,19,17],[15,17,21,19],[15,19,24,21],[15,21,28,24],[15,24,nil,28],
+	[16,nil,13,44],[16,44,16,13],[16,13,18,16],[16,16,19,18],[16,18,nil,19],
+	[17,nil,44,18],[17,18,35,44],[17,44,40,35],[17,35,39,40],[17,40,nil,39]
 ]
 h_and_p_list.each do |history_id, llink_id, rlink_id, publication_id|
 	PublicationsAndHistory.create(history_id: history_id, llink_id: llink_id, rlink_id: rlink_id, publication_id: publication_id)	

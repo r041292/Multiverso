@@ -15,7 +15,8 @@
       Ver también en:
       <ul class="breadcrumbs">
         <%@publication.stories_which_belongs.each do |history|%>
-          <li><a href="/histories/<%=history.history_id%>">Historia <%= history.history_id%></a></li>
+
+          <li><a href="/histories/<%=history.history_id%>"><%= history.history.title %></a></li>
         <% end %>
       </ul>
     </div>

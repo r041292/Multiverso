@@ -2,10 +2,13 @@
   <h1>Multiverso</h1>
   <p><strong>Ultimas Historias: </strong>
 <% @histories.each do |history| %>
-<%= link_to "Historia # #{history.id}", history_path(history) %>
-<%end%></p>
+<%= link_to "- #{history.title} ", history_path(history) %>
+<%end%>
+<%= link_to "- Ver más", histories_path%>
+</p>
+
   <div class="panel callout radius">
-  <p><strong>Historia del mes Biblioteca Karl C. Parrish<strong></p>
+  <p><strong><%= @singularity.title %><strong></p>
   <p><%= @singularity.publication.content %></p>
 
   <% if user_signed_in?  %> <%= link_to 'Crea tu propia historia!', continue_publication_path(:history_id =>"-1", :llink => @singularity.id) %><%end%>
