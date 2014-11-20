@@ -34,7 +34,9 @@ class PublicationsController < ApplicationController
     @history_id = params[:history_id]
     @llink = params[:llink]
     @history_name = params[:history_name]
-    puts "History name is "+@history_name
+    if @history_name ==nil
+      @history_name = "Historia sin nombre"
+    end
     Publication.create_publications_and_histories(@history_id,@llink,@publication.id,@history_name)
     respond_with(@publication)
   end
