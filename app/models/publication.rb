@@ -27,6 +27,20 @@ class Publication < ActiveRecord::Base
   end
 end
 
+def self.checkNewHistory(history_id,llink)
+  if(history_id == "-1")
+    return true
+  else
+    @p_and_h= PublicationsAndHistory.where("history_id = #{history_id} AND publication_id = #{llink}")
+    @p_and_h.each do |publ|
+      if publ.rlink_id != nil
+        return true
+      end
+    end
+    return false
+  end
+end
+
 def self.delete_from_p_h(publication)
   if(!publication.singularity)
     @p_and_h = PublicationsAndHistory.find_all_by_publication_id publication.id
@@ -60,10 +74,11 @@ end
 
 
 
-def self.create_publications_and_histories(history_id,llink,publication_id)
+def self.create_publications_and_histories(history_id,llink,publication_id,history_name)
   inHistory = 0
   if(history_id == "-1")
     @n_history= History.new
+    @n_history.title = history_name
     @n_history.publication_id = llink
     @n_history.save
     @n_ph = PublicationsAndHistory.new
@@ -92,6 +107,7 @@ def self.create_publications_and_histories(history_id,llink,publication_id)
       else
         puts "its not nill i must create a new history omg with publication #{publication_id}"
         @n_history= History.new
+        @n_history.title = history_name
         @temp_history = History.find(history_id)
         @n_history.publication_id = @temp_history.publication_id
         @n_history.save
