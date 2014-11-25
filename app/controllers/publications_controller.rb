@@ -85,6 +85,9 @@ class PublicationsController < ApplicationController
     end
   end
 
+  def banned_user
+  end
+
   private
     def set_publication
       @publication = Publication.find(params[:id])
@@ -93,4 +96,5 @@ class PublicationsController < ApplicationController
     def publication_params
       params.require(:publication).permit(:content, :url, :user_id, :type, :singularity)
     end
+
 end

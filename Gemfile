@@ -20,6 +20,8 @@ gem 'certified'
 
 # Foundation
 gem 'foundation-rails'
+#Active Admin
+gem 'activeadmin', github: 'activeadmin'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'

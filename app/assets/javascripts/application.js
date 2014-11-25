@@ -15,8 +15,6 @@
 //= require turbolinks
 //= require_tree .
 //= require jquery.infinitescroll
-
-$(function(){ $(document).foundation(); });
-
 //= require foundation
+$(function(){ $(document).foundation(); });
 $(document).foundation();
