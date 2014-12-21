@@ -1,0 +1,536 @@
+@charset "UTF-8";
+/* CSS Document */
+
+* {
+	padding:0px;
+	margin:0px;
+}
+
+#wrapheader {
+	width: 1000px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 10px;
+}
+
+
+#headerblack {
+	width: 100%;
+	background-color: #000000;
+	height: 60px;
+}
+
+#logouninorte {
+	background-image: url(/assets/logo_uninorte.png);
+	background-repeat: no-repeat;
+	width: 130px;
+	height: 40px;
+	float: left;
+}
+
+#headerblue {
+	height: 130px;
+	width: 100%;
+	background-color: #77c7ea;
+	margin-right: auto;
+	margin-left: auto;
+	background-image: url(/assets/logomultiversohome.png);
+	background-repeat: no-repeat;
+	/* [disabled]background-origin: padding-box; */
+	background-position: center center;
+}
+ 
+.box{
+
+  width: 300px;
+  height: 50px;
+}
+
+.container-1 input#search{
+	width: 140px;
+	height: 25px;
+	background: #666;
+	border: none;
+	font-size: 10pt;
+	float: left;
+	color: #999;
+	padding-left: 15px;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+}
+
+.container-1 input#search::-webkit-input-placeholder {
+   color: #999;
+}
+ 
+.container-1 input#search:-moz-placeholder { /* Firefox 18- */
+   color: #999;  
+}
+ 
+.container-1 input#search::-moz-placeholder {  /* Firefox 19+ */
+   color: #999;  
+}
+ 
+.container-1 input#search:-ms-input-placeholder {  
+   color:#999;  
+}
+#busqueda {
+	height: 30px;
+	width: 150px;
+	float: right;
+}
+
+#navbar {
+	background-repeat: no-repeat;
+	height: 30px;
+	float: right;
+	padding-top: 11px;
+	color: #FFFFFF;
+	clear: inherit;
+	width: 370px;
+	background-image: url(/assets/222.png);
+	padding-left: 20px;
+}
+#nav_menu {
+	width: 220px;
+	float: left;
+}
+#nav_menu ul {
+	margin: 0px;
+	padding: 0px;
+	list-style-type: none;
+	float: left;
+}
+#nav_menu ul li {
+	float: left;
+}
+#nav_menu ul a {
+	color: #FFF;
+	display: block;
+	text-align: center;
+	width: 70px;
+	text-decoration: none;
+	font-family: source-sans-pro, sans-serif;
+	font-size: 15px;
+	font-weight: lighter;
+}
+
+#home_logo {
+	width: 35px;
+	height: 40px;
+	float: right;
+	clear: inherit;
+}
+#homeicon {
+	background-image: url(file:///Macintosh%20HD/Users/Lulii/Desktop/images/home_icon.png);
+	background-repeat: no-repeat;
+	width: 10px;
+	height: 25px;
+	float: right;
+	margin: 5px;	
+}
+
+#pills {
+	width: 225px;
+	border-radius: 15px;
+	background-color: #a9c6d5;
+	float: left;
+	height: 190px;
+	margin-right: 20px;
+	padding-top: 15px;
+	padding-left: 20px;
+	padding-right: 20px;
+	margin-left: 60px;
+}
+#wrappercontent {
+	width: 1000px;
+	margin-left: auto;
+	margin-right: auto;
+	background-image: url(file:///Macintosh%20HD/Users/Lulii/Desktop/images/green_box.png);
+	background-repeat: no-repeat;
+}
+#titulo_singularidad {
+	font-family: source-sans-pro, sans-serif;
+	width: 250px;
+	height: 30px;
+	color: #FFF;
+	font-size: 30px;
+	margin-left: auto;
+	margin-right: auto;
+	font-weight: bold;
+}
+#pillscontent {
+	font-family: source-sans-pro, sans-serif;
+	background-color: #e5ecea;
+	border-radius: 15px;
+	padding-top: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-bottom: 10px;
+	font-size: 13px;
+	text-align: justify;
+	font-weight: lighter;
+}
+
+#pills_2 {
+	width: 225px;
+	border-radius: 15px;
+	background-color: #a9c6d5;
+	float: left;
+	height: 190px;
+	margin-right: 20px;
+	padding-top: 15px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+#wrappercontent {
+	margin-left: auto;
+	margin-right: auto;
+	background-image: url(file:///Macintosh%20HD/Users/Lulii/bonett_buelvas_perpi%C3%B1an/images/back-blue.png);
+	background-repeat: no-repeat;
+}
+#pillscontent_2 {
+	font-family: source-sans-pro, sans-serif;
+	font-weight: lighter;
+	background-color: #e5ecea;
+	border-radius: 15px;
+	padding-top: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-bottom: 10px;
+	font-size: 13px;
+}
+#pillscontent_2 {
+	text-align: justify;
+	
+}
+#continuar {
+	color: #848384;
+	float: right;
+	font-size: 12px;
+	float: right;
+	font-family: source-sans-pro, sans-serif;
+	font-weight: 100;
+	padding-top: 5px;
+}
+
+#wrappercontent {
+	width: 1000px;
+	margin-right: auto;
+	height: 400px;
+	background-image: url(/assets/green-back-story.png);
+	background-repeat: no-repeat;
+}
+#singularidad_texto {
+	font-family: source-sans-pro, sans-serif;
+	font-weight: lighter;
+	width: 780px;
+	height: 45px;
+	margin-right: auto;
+	margin-left: auto;
+	padding-top: 10px;
+	text-align: center;
+}
+#down_wrapper {
+	height: 350px;
+	width: 880px;
+	background-image: url(/assets/down_green_box.png);
+	background-repeat: no-repeat;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 60px;
+	padding-right: 60px;
+}
+
+#continuar_2 {
+	color: #848384;
+	font-family: source-sans-pro, sans-serif;
+	font-weight: 100;
+	float: right;
+	font-size: 12px;
+	padding-top: 5px;
+}
+
+#singularidad {
+	height: 100px;
+	padding-bottom: 30px;
+	padding-top: 40px;
+	width: 1000px;
+	background-image: url(/assets/green-back-story.png);
+}
+
+#pillscontent_3 {
+	background-color: #e5ecea;
+	border-radius: 15px;
+	padding-top: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-bottom: 10px;
+	font-size: 13px;
+	text-align: justify;
+	font-family: source-sans-pro, sans-serif;
+	font-weight: lighter;
+}
+#pills_3 {
+	font-family: Roboto-Thin;
+	width: 225px;
+	border-radius: 15px;
+	background-color: #a9c6d5;
+	float: left;
+	height: 190px;
+	margin-right: 20px;
+	padding-top: 15px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+#continuar_3 {
+	color: #848384;
+	font-family: source-sans-pro, sans-serif;
+	font-weight: 100;
+	float: right;
+	font-size: 12px;
+	padding-top: 5px;
+}
+
+#pillscontent_4 {
+	background-color: #e5ecea;
+	border-radius: 15px;
+	padding-top: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-bottom: 10px;
+	font-size: 13px;
+	text-align: justify;
+	font-family: source-sans-pro, sans-serif;
+	font-weight: lighter;
+}
+#pills_4 {
+	font-family: Roboto-Thin;
+	width: 225px;
+	border-radius: 15px;
+	background-color: #a9c6d5;
+	float: left;
+	height: 190px;
+	margin-right: 20px;
+	padding-top: 15px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+#continuar_4 {
+	font-family: source-sans-pro, sans-serif;
+	font-weight: 100;
+	float: right;
+}
+
+#pillscontent_5 {
+	background-color: #e5ecea;
+	border-radius: 15px;
+	padding-top: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-bottom: 10px;
+	font-size: 13px;
+	font-family: source-sans-pro, sans-serif;
+	font-weight: lighter;
+	text-align: justify;
+}
+#pills_5 {
+	font-family: Roboto-Thin;
+	width: 225px;
+	border-radius: 15px;
+	background-color: #a9c6d5;
+	float: left;
+	height: 190px;
+	margin-right: 20px;
+	padding-top: 15px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+#continuar_5 {
+	color: #848384;
+	font-family: source-sans-pro, sans-serif;
+	font-weight: 100;
+	float: right;
+	font-size: 12px;
+	padding-top: 5px;
+}
+
+#pillscontent_6 {
+	background-color: #e5ecea;
+	border-radius: 15px;
+	padding-top: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-bottom: 10px;
+	font-size: 13px;
+	text-align: justify;
+	font-family: source-sans-pro, sans-serif;
+	font-weight: lighter;
+}
+#pills_6 {
+	width: 225px;
+	border-radius: 15px;
+	background-color: #a9c6d5;
+	float: left;
+	height: 190px;
+	margin-right: 20px;
+	padding-top: 15px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+#continuar_6 {
+	font-family: Roboto-Thin;
+	float: right;
+	font-family: source-sans-pro, sans-serif;
+	font-weight: 100;
+	color: #848384;
+	font-size: 12px;
+	padding-top: 5px;
+}
+	
+#date_3 {
+	font-size: 11px;
+	text-align: right;
+	padding-bottom: 5px;
+	font-family: source-sans-pro, sans-serif;
+	font-weight: normal;
+	color: #000;
+}
+#date_2 {
+	font-size: 11px;
+	text-align: right;
+	padding-bottom: 5px;
+	font-family: source-sans-pro, sans-serif;
+	font-weight: normal;
+	color: #000;
+}
+#date {
+	text-align: right;
+	font-size: 11px;
+	padding-bottom: 5px;
+	font-family: source-sans-pro, sans-serif;
+	font-weight: normal;
+	color: #000;
+}
+#pillsuser {
+	font-family: source-sans-pro, sans-serif;
+	font-weight: lighter;
+	font-size: 13px;
+	margin-top: 10px;
+	height: 25px;
+	background-image: url(/assets/continuar_box.png);
+	background-repeat: no-repeat;
+	padding-top: 6px;
+	padding-left: 45px;
+	color: #666;
+}
+#pillsuser_2 {
+	font-size: 13px;
+	background-image: url(/assets/continuar_box.png);
+	margin-top: 10px;
+	padding-top: 6px;
+	padding-left: 45px;
+	background-repeat: no-repeat;
+	height: 25px;
+	font-family: source-sans-pro, sans-serif;
+	font-weight: lighter;
+	color: #666;
+}
+
+#pillsuser_3 {
+	font-size: 13px;
+	background-image: url(/assets/continuar_box.png);
+	background-repeat: no-repeat;
+	height: 25px;
+	margin-top: 10px;
+	padding-left: 45px;
+	padding-top: 6px;
+	font-family: source-sans-pro, sans-serif;
+	font-weight: lighter;
+	color: #666;
+}
+#pillsuser_4 {
+	background-image: url(/assets/continuar_box.png);
+	background-repeat: no-repeat;
+	margin-top: 10px;
+	padding-top: 6px;
+	padding-left: 45px;
+	height: 25px;
+	font-family: source-sans-pro, sans-serif;
+	font-weight: lighter;
+	color: #666;
+	font-size: 13px;
+}
+#pillsuser_5 {
+	background-image: url(/assets/continuar_box.png);
+	background-repeat: no-repeat;
+	height: 25px;
+	margin-top: 10px;
+	padding-top: 6px;
+	padding-left: 45px;
+	font-family: source-sans-pro, sans-serif;
+	font-weight: lighter;
+	color: #666;
+	font-size: 13px;
+}
+
+#date_6 {
+	text-align: right;
+	font-size: 11px;
+	padding-bottom: 5px;
+	font-family: source-sans-pro, sans-serif;
+	font-weight: normal;
+	color: #000;
+}
+#date_5 {
+	text-align: right;
+	font-size: 11px;
+	padding-bottom: 5px;
+	font-family: source-sans-pro, sans-serif;
+	font-weight: normal;
+	color: #000;
+}
+#date_4 {
+	text-align: right;
+	font-size: 11px;
+	padding-bottom: 5px;
+	font-family: source-sans-pro, sans-serif;
+	font-weight: normal;
+	color: #000;
+}
+#pillsuser_4 p {
+	font-size: 13px;
+}
+#pillsuser_5 p {
+	font-size: 13px;
+}
+
+#continuar_4 {
+	color: #848384;
+	font-size: 12px;
+	padding-top: 5px;
+}
+#pillsuser_6 {
+	font-size: 13px;
+	background-image: url(/assets/continuar_box.png);
+	background-repeat: no-repeat;
+	height: 25px;
+	margin-top: 10px;
+	padding-top: 6px;
+	padding-left: 45px;
+	font-family: source-sans-pro, sans-serif;
+	font-weight: lighter;
+	color: #666;
+}
+#wrapper_pills {
+	padding: 10px;
+}
+#super_wrapper {
+	margin-right: auto;
+	margin-left: auto;
+}
+#botones_admin {
+	height: 80px;
+}

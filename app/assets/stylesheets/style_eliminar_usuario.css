@@ -1,0 +1,222 @@
+@charset "UTF-8";
+/* CSS Document */
+
+* {
+	padding:0px;
+	margin:0px;
+}
+
+#wrapheader {
+	width: 1000px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 10px;
+}
+
+
+#headerblack {
+	width: 100%;
+	background-color: #000000;
+	height: 60px;
+}
+
+#logouninorte {
+	background-image: url(/assets/logo_uninorte.png);
+	background-repeat: no-repeat;
+	width: 130px;
+	height: 40px;
+	float: left;
+}
+
+#headerblue {
+	height: 130px;
+	width: 100%;
+	background-color: #77c7ea;
+	margin-right: auto;
+	margin-left: auto;
+	background-image: url(/assets/logomultiversohome.png);
+	background-repeat: no-repeat;
+	/* [disabled]background-origin: padding-box; */
+	background-position: center center;
+}
+ 
+.box{
+
+  width: 300px;
+  height: 50px;
+}
+
+.container-1 input#search{
+	width: 140px;
+	height: 25px;
+	background: #666;
+	border: none;
+	font-size: 10pt;
+	float: left;
+	color: #999;
+	padding-left: 15px;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+}
+
+.container-1 input#search::-webkit-input-placeholder {
+   color: #999;
+}
+ 
+.container-1 input#search:-moz-placeholder { /* Firefox 18- */
+   color: #999;  
+}
+ 
+.container-1 input#search::-moz-placeholder {  /* Firefox 19+ */
+   color: #999;  
+}
+ 
+.container-1 input#search:-ms-input-placeholder {  
+   color:#999;  
+}
+#busqueda {
+	height: 30px;
+	width: 150px;
+	float: right;
+}
+
+#navbar {
+	background-repeat: no-repeat;
+	height: 30px;
+	float: right;
+	padding-top: 11px;
+	color: #FFFFFF;
+	clear: inherit;
+	width: 390px;
+	background-image: url(/assets/222.png);
+	padding-left: 20px;
+}
+#nav_menu {
+	width: 220px;
+	float: left;
+}
+#nav_menu ul {
+	margin: 0px;
+	padding: 0px;
+	list-style-type: none;
+	float: left;
+}
+#nav_menu ul li {
+	float: left;
+}
+#nav_menu ul a {
+	color: #FFF;
+	display: block;
+	text-align: center;
+	width: 70px;
+	text-decoration: none;
+	font-family: source-sans-pro, sans-serif;
+	font-size: 15px;
+	font-weight: lighter;
+}
+
+#home_logo {
+	width: 35px;
+	height: 40px;
+	float: right;
+	clear: inherit;
+}
+#homeicon {
+	background-image: url(file:///Macintosh%20HD/Users/Lulii/Desktop/images/home_icon.png);
+	background-repeat: no-repeat;
+	width: 10px;
+	height: 25px;
+	float: right;
+	margin: 5px;	
+}#wrappercontent {
+	height: 400px;
+	width: 930px;
+	background-image: url(/assets/eliminar_usuario_back.png);
+	background-repeat: no-repeat;
+	margin-left: auto;
+	margin-right: auto;
+}
+#blue_box {
+	font-family: source-sans-pro, sans-serif;
+	height: 180px;
+	width: 560px;
+	background-color: #a9c6d5;
+	margin-top: 40px;
+	border-radius: 5px;
+	padding-top: 30px;
+	padding-left: 30px;
+	margin-left: auto;
+	margin-right: auto;
+	font-weight: lighter;
+	background-repeat: no-repeat;
+}
+#texto_de_busqueda {
+	height: 30px;
+	width: 280px;
+	margin-left: 175px;
+	font-size: 30px;
+	color: #7ab935;
+	font-family: source-sans-pro, sans-serif;
+	padding-top: 45px;
+}
+
+
+*,
+*:before,
+*:after {
+   box-sizing: border-box;
+}
+form {
+	border: 1px solid #c6c7cc;
+	border-radius: 5px;
+	font: 14px/1.4 "Helvetica Neue", Helvetica, Arial, sans-serif;
+	overflow: hidden;
+	width: 400px;
+}
+
+input {
+	width:500px;
+  border-radius: 5px;
+  font: 14px/1.4 "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: 0;
+}
+.account-info {
+  padding: 10px 5px 0 20px;
+}
+
+.account-info input {
+	background: #fff;
+	border: 1px solid #c6c7cc;
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, .1);
+	color: #636466;
+	padding: 5px;
+	margin-top: 5px;
+	width: 100%;
+}
+.account-action {
+  background: #f0f0f2;
+  border-top: 1px solid #c6c7cc;
+  padding: 13px;
+}
+
+#blue_box label {
+
+	display: block;
+	
+	margin-bottom: 10px;
+	margin-right: 15px;
+	
+}
+#boton_blue_box {
+	height: 50px;
+	width: 150px;
+	float: right;
+	background-image: url(/assets/bloq_sumit.png);
+	margin-right: 30px;
+	padding-top: 14px;
+	background-repeat: no-repeat;
+	padding-left: 55px;
+	font-size: 14px;
+	color: #666;
+}

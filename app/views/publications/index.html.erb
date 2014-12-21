@@ -1,26 +1,95 @@
-<div class="row">
-  <h1>Multiverso</h1>
-  <p><strong>Ultimas Historias: </strong>
-<% @histories.each do |history| %>
-<%= link_to "- #{history.title} ", history_path(history) %>
-<%end%>
-<%= link_to "- Ver más", histories_path%>
-</p>
 
-  <div class="panel callout radius">
-  <p><strong><%= @singularity.title %><strong></p>
-  <p><%= @singularity.publication.content %></p>
+<body>
 
-  <% if user_signed_in?  %> <%= link_to 'Crea tu propia historia!', continue_publication_path(:history_id =>"-1", :llink => @singularity.id) %><%end%>
-</div>
+
+
+<div id="headerblue"></div>
+<div id="super_wrapper">
+  <div id="wrappercontent">
+    <div id="singularidad">
+      <div id="titulo_singularidad"><%= @singularity.title %></div>
+      <div id="singularidad_texto"><%= @singularity.publication.content %> <% if user_signed_in?  %> <%= link_to 'Crea tu propia historia!', continue_publication_path(:history_id =>"-1", :llink => @singularity.id) %><%end%></div>
+
+    </div>
   
-  <h2>Timeline</h2>
-</div>
-<div id="publications">
+        <div id="pills">
+      <div id="date"><%= time_ago_in_words(@publications[0].created_at) %></div>
+      <div id="pillscontent"><% if @publications[0].content == "" %>
+       <%= link_to content_tag('div',"Ver Publicación"), @publications[0] %>
+        <%= raw @publications[0].url %>
+      <% else %> 
+        <%= link_to content_tag('pillscontent',@publications[0].content), @publications[0] %>
+      <% end %></div>
+      <div id="continuar">Por: <%=@publications[0].user.name %></div>
+    </div>
+     <div id="pills_2">
+      <div id="date_2"><%= time_ago_in_words(@publications[1].created_at) %></div>
+      <div id="pillscontent_2"><% if @publications[1].content == "" %>
+       <%= link_to content_tag('div',"Ver Publicación"), @publications[1] %>
+        <%= raw @publications[1].url %>
+      <% else %> 
+        <%= link_to content_tag('pillscontent_2',@publications[1].content), @publications[1] %>
+      <% end %></div>
+      <div id="continuar_2">Por: <%=@publications[1].user.name %></div>
+    </div>
+    <div id="pills_3">
+      <div id="date_3"><%= time_ago_in_words(@publications[2].created_at) %></div>
+      <div id="pillscontent_3"><% if @publications[2].content == "" %>
+       <%= link_to content_tag('div',"Ver Publicación"), @publications[2] %>
+        <%= raw @publications[2].url %>
+      <% else %> 
+        <%= link_to content_tag('pillscontent_2',@publications[2].content), @publications[2] %>
+      <% end %></div>
+      <div id="continuar_3">Por: <%=@publications[2].user.name %></div>
+
+     </div>
+ </div>
+ <div id="down_wrapper">
+  <div id="pills_4">
+      <div id="date_4"><%= time_ago_in_words(@publications[3].created_at) %></div>
+      <div id="pillscontent_4"><% if @publications[3].content == "" %>
+       <%= link_to content_tag('div',"Ver Publicación"), @publications[3] %>
+        <%= raw @publications[3].url %>
+      <% else %> 
+        <%= link_to content_tag('pillscontent_2',@publications[3].content), @publications[3] %>
+      <% end %></div>
+      <div id="continuar_4">Por: <%=@publications[3].user.name %></div>
+      </div>
+      
+       <div id="pills_5">
+      <div id="date_5"><%= time_ago_in_words(@publications[4].created_at) %></div>
+      <div id="pillscontent_5"><% if @publications[4].content == "" %>
+       <%= link_to content_tag('div',"Ver Publicación"), @publications[4] %>
+        <%= raw @publications[4].url %>
+      <% else %> 
+        <%= link_to content_tag('pillscontent_2',@publications[4].content), @publications[4] %>
+      <% end %></div>
+      <div id="continuar_5">Por: <%=@publications[4].user.name %></div>
+      </div>
+      
+       <div id="pills_6">
+      <div id="date_6"><%= time_ago_in_words(@publications[5].created_at) %></div>
+      <div id="pillscontent_6"><% if @publications[5].content == "" %>
+       <%= link_to content_tag('div',"Ver Publicación"), @publications[5] %>
+        <%= raw @publications[5].url %>
+      <% else %> 
+        <%= link_to content_tag('pillscontent_2',@publications[5].content), @publications[5] %>
+      <% end %></div>
+      <div id="continuar_6">Por: <%=@publications[5].user.name %></div>
+      </div>
+      
+
  
-   <%= render @publications %>
+ 
+ 
+ </div> 
+  
 </div>
-<div class="row">
-  <%= paginate @publications %>
-</div>
+
+
+
+
+
+
+</body>
 

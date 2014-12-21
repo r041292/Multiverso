@@ -1,0 +1,307 @@
+@charset "UTF-8";
+/* CSS Document */
+
+* {
+	padding:0px;
+	margin:0px;
+}
+
+#wrapheader {
+	width: 1000px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+#headerblack {
+	width: 100%;
+	background-color: #000000;
+	height: 60px;
+}
+
+#logouninorte {
+	background-image: url(../imagenes/logo_uninorte.png);
+	background-repeat: no-repeat;
+	width: 130px;
+	height: 40px;
+	float: left;
+	margin-top: 10px;
+}
+
+#headerblue {
+	height: 20px;
+	width: 100%;
+	background-color: #77c7ea;
+	margin-right: auto;
+	margin-left: auto;
+	background-repeat: no-repeat;
+	/* [disabled]background-origin: padding-box; */
+	background-position: center center;
+}
+ 
+.box{
+
+  width: 300px;
+  height: 50px;
+}
+
+.container-1 input#search{
+	width: 140px;
+	height: 25px;
+	background: #666;
+	border: none;
+	font-size: 10pt;
+	float: left;
+	color: #999;
+	padding-left: 15px;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+}
+
+.container-1 input#search::-webkit-input-placeholder {
+   color: #999;
+}
+ 
+.container-1 input#search:-moz-placeholder { /* Firefox 18- */
+   color: #999;  
+}
+ 
+.container-1 input#search::-moz-placeholder {  /* Firefox 19+ */
+   color: #999;  
+}
+ 
+.container-1 input#search:-ms-input-placeholder {  
+   color:#999;  
+}
+#busqueda {
+	height: 30px;
+	width: 150px;
+	float: right;
+}
+
+#navbar {
+	background-repeat: no-repeat;
+	height: 30px;
+	float: right;
+	padding-top: 11px;
+	color: #FFFFFF;
+	clear: inherit;
+	width: 370px;
+	background-image: url(../imagenes/222.png);
+	padding-left: 20px;
+	margin-top: 10px;
+}
+#nav_menu {
+	width: 220px;
+	float: left;
+}
+#nav_menu ul {
+	margin: 0px;
+	padding: 0px;
+	list-style-type: none;
+	float: left;
+}
+#nav_menu ul li {
+	float: left;
+}
+#nav_menu ul a {
+	color: #FFF;
+	display: block;
+	text-align: center;
+	width: 70px;
+	text-decoration: none;
+	font-family: source-sans-pro, sans-serif;
+	font-size: 15px;
+	font-weight: lighter;
+}
+
+#home_logo {
+	width: 35px;
+	height: 40px;
+	float: right;
+	clear: inherit;
+}
+#homeicon {
+	background-image: url(file:///Macintosh%20HD/Users/Lulii/Desktop/images/home_icon.png);
+	background-repeat: no-repeat;
+	width: 10px;
+	height: 25px;
+	float: right;
+	margin: 5px;	
+}
+#logo_multiverso_cuadros {
+	float: left;
+	height: 47px;
+	width: 47px;
+	background-image: url(../imagenes/mini_logo_multiverso.png);
+	margin-right: 15px;
+	margin-top: 7px;
+}
+#pills {
+	width: 312px;
+	border-radius: 15px;
+	background-color: #a9c6d5;
+	height: 278px;
+	padding-top: 15px;
+	padding-right: 20px;
+	padding-left: 20px;
+	margin-right: auto;
+	margin-left: auto;
+}
+#pillscontent {
+	font-family: source-sans-pro, sans-serif;
+	background-color: #e5ecea;
+	border-radius: 15px;
+	padding-top: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-bottom: 10px;
+	font-size: 18px;
+	text-align: justify;
+	font-weight: lighter;
+}
+#continuar {
+	color: #848384;
+	float: right;
+	font-size: 13px;
+	float: right;
+	font-family: source-sans-pro, sans-serif;
+	font-weight: 100;
+	padding-top: 8px;
+}
+#pillsuser {
+	font-family: source-sans-pro, sans-serif;
+	font-weight: lighter;
+	font-size: 14px;
+	margin-top: 10px;
+	height: 35px;
+	background-image: url(../imagenes/send_icon.png);
+	background-repeat: no-repeat;
+	color: #666;
+	padding-left: 60px;
+	padding-top: 9px;
+}
+#date {
+	text-align: right;
+	font-size: 13px;
+	padding-bottom: 8px;
+	font-family: source-sans-pro, sans-serif;
+	font-weight: normal;
+	color: #000;
+}
+#wrapper {
+	width: 1000px;
+	height: 800px;
+	margin-left: auto;
+	margin-right: auto;
+}
+#post_view_title {
+	height: 40px;
+	width: 170px;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 30px;
+	font-family: source-sans-pro, sans-serif;
+	font-weight: lighter;
+	color: #7ab935;
+	padding-top: 30px;
+	padding-bottom: 10px;
+}
+#wrapper #upper {
+	margin-right: auto;
+	margin-left: auto;
+	background-image: url(../imagenes/back_new_post.png);
+	height: 210px;
+}
+#mini_wrap {
+	height: 380px;
+	width: 1000px;
+	background-image: url(../imagenes/back_new_down.png);
+	background-repeat: no-repeat;
+}
+#opcion_1 {
+	height: 100px;
+	width: 320px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #a9c6d5;
+	border-radius: 15px;
+}
+#opcion_2 {
+	font-family: source-sans-pro, sans-serif;
+	font-weight: lighter;
+	height: 45px;
+	width: 340px;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 25px;
+	background-color: #a9c6d5;
+	border-radius: 15px;
+	color: #666;
+	padding-top: 15px;
+}
+
+#wite_box_opcion_2 {
+	font-family: source-sans-pro, sans-serif;
+	font-weight: lighter;
+	height: 35px;
+	width: 240px;
+	margin-right: auto;
+	margin-left: auto;
+	background-image: url(../imagenes/back_opcion_22.png);
+	background-repeat: no-repeat;
+	font-size: 13px;
+	text-align: center;
+	padding-top: 8px;
+	color: #666;
+	
+	
+}
+#tipo {
+	width: 100px;
+	height: 30px;
+}
+#text_tipo {
+	width: 200px;
+	color: #666;
+	padding-left: 20px;
+	padding-top: 10px;
+	padding-bottom: 5px;
+	font-family: source-sans-pro, sans-serif;
+	font-weight: lighter;
+	font-size: 13px;
+}
+#opciones_de_archivo {
+	height: 55px;
+	width: 265px;
+	margin-right: auto;
+	margin-left: auto;
+	background-color: #e5ecea;
+	border-radius: 15px;
+	padding-top: 10px;
+}
+#opcion_arc_1 {
+	height: 50px;
+	width: 60px;
+	float: left;
+	background-image: url(../imagenes/text_icon.png);
+	background-repeat: no-repeat;
+	margin-left: 23px;
+}
+#opcion_arc_2 {
+	float: left;
+	height: 50px;
+	width: 60px;
+	background-image: url(../imagenes/play_icon.png);
+	background-repeat: no-repeat;
+	margin-left: 20px;
+}
+#opcion_arc_3 {
+	float: left;
+	height: 50px;
+	width: 60px;
+	background-image: url(../imagenes/image_icon.png);
+	background-repeat: no-repeat;
+	margin-left: 20px;
+}

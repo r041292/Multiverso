@@ -1,0 +1,162 @@
+@charset "UTF-8";
+/* CSS Document */
+
+
+* {
+	padding:0px;
+	margin:0px;
+}
+
+#wrapheader {
+	width: 1000px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 10px;
+}
+
+
+#headerblack {
+	width: 100%;
+	background-color: #000000;
+	height: 60px;
+}
+
+#logouninorte {
+	background-image: url(../imagenes/logo_uninorte.png);
+	background-repeat: no-repeat;
+	width: 130px;
+	height: 40px;
+	float: left;
+}
+
+#headerblue {
+	height: 130px;
+	width: 100%;
+	background-color: #77c7ea;
+	margin-right: auto;
+	margin-left: auto;
+	background-image: url(../imagenes/logomultiversohome.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+#navbar {
+	background-repeat: no-repeat;
+	height: 30px;
+	float: right;
+	padding-top: 11px;
+	color: #FFFFFF;
+	clear: inherit;
+	width: 370px;
+	background-image: url(../imagenes/222.png);
+	padding-left: 20px;
+}
+#nav_menu {
+	width: 220px;
+	float: left;
+}
+#nav_menu ul {
+	margin: 0px;
+	padding: 0px;
+	list-style-type: none;
+	float: left;
+}
+#nav_menu ul li {
+	float: left;
+}
+#nav_menu ul a {
+	color: #FFF;
+	display: block;
+	text-align: center;
+	width: 70px;
+	text-decoration: none;
+	font-family: source-sans-pro, sans-serif;
+	font-size: 15px;
+	font-weight: lighter;
+}
+#home_logo {
+	width: 35px;
+	height: 40px;
+	float: right;
+	clear: inherit;
+}
+#homeicon {
+	background-image: url(../images/home_icon.png);
+	background-repeat: no-repeat;
+	width: 10px;
+	height: 25px;
+	float: right;
+	margin: 5px;	
+}
+#acerca_de_wrapper {
+	height: 400px;
+	width: 1000px;
+	background-image: url(../imagenes/back_acerca.png);
+	background-repeat: no-repeat;
+	padding-top: 35px;
+	margin-left: auto;
+	margin-right: auto;
+}
+#texto_acerca_de {
+	height: 130px;
+	width: 780px;
+	margin-right: auto;
+	margin-left: auto;
+	text-align: center;
+	font-family: source-sans-pro, sans-serif;
+	font-size: 16px;
+	font-weight: lighter;
+}
+#titulo_acerca_de {
+	font-size: 30px;
+	width: 360px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 20px;
+	color: #FFF;
+	font-family: source-sans-pro, sans-serif;
+	font-weight: bold;
+}
+
+
+ 
+.box{
+
+  width: 300px;
+  height: 50px;
+}
+
+.container-1 input#search{
+	width: 140px;
+	height: 25px;
+	background: #666;
+	border: none;
+	font-size: 10pt;
+	float: left;
+	color: #999;
+	padding-left: 15px;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+}
+
+.container-1 input#search::-webkit-input-placeholder {
+   color: #999;
+}
+ 
+.container-1 input#search:-moz-placeholder { /* Firefox 18- */
+   color: #999;  
+}
+ 
+.container-1 input#search::-moz-placeholder {  /* Firefox 19+ */
+   color: #999;  
+}
+ 
+.container-1 input#search:-ms-input-placeholder {  
+   color:#999;  
+}
+#busqueda {
+	height: 30px;
+	width: 150px;
+	float: right;
+}

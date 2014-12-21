@@ -7,60 +7,56 @@
     <title><%= content_for?(:title) ? yield(:title) : "Multiverso -  Uninorte" %></title>
 
     <%= stylesheet_link_tag    "application" %>
+    <%= stylesheet_link_tag "style_index.css", media: "all" %>
     <%= javascript_include_tag "vendor/modernizr" %>
     <%= csrf_meta_tags %>
   </head>
 
   <body>
-    <nav class="top-bar" data-topbar role="navigation">
-      <ul class="title-area">
-        <li class="name">
-          <h1><a href="/">Multiverso Uninorte</a></h1>
-        </li>
-        <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
-        <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
-      </ul>
-      <section class="top-bar-section">
-        <!-- Right Nav Section -->
-        <ul class="right">
-          <li class="divider"></li>
-          <% if user_signed_in? %>
+   
+
+    <div id="headerblack">
+  <div id="wrapheader">
+        <div id="logouninorte"></div>
+        <div id="navbar">
+          <div id="nav_menu">
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Acerca</a></li>
+              <% if user_signed_in? %>
             <% if current_user.admin? %>
-              <li class="has-form"><a href="#" class="button">Admin - <%= current_user.name %></a></li>
+              <li ><a href="#" class="button">Admin - <%= current_user.name %></a></li>
             <% else %>
-              <li class="name"><a href="#" onclick="return false" >Hola <%= current_user.name %> !</a></li>
+              <li ><a href="#" onclick="return false" >Hola <%= current_user.name %> !</a></li>
             <% end %>
-            <li class="has-form"><%= link_to('Cerrar sesion', destroy_user_session_path, :method => :delete) %></l>
+            <li ><%= link_to('Salir', destroy_user_session_path, :method => :delete) %></l>
           <% else %>
           <li class="name"><a href="#" onclick="return false" >Iniciar sesion con</a></li>
           <li class="has-form"><a href="/users/auth/facebook" class="button">Facebook</a></li>
           <li class="has-form"><a href="/users/auth/twitter" class="button">Twitter</a></li>
           <% end %>
-          
-        </ul>
-        <!-- Left Nav Section -->
-        <ul class="left">
-          <li class="has-form">
-            <div class="row collapse">
-              <div class="large-8 small-9 columns">
-                <%= form_tag(search_path, :method=>'get', :multipart => true) do %>
-                <%= text_field_tag :search, params[:search], placeholder: "Ejemplo: Drama" %>
-              </div>
-              <div class="large-4 small-3 columns">
-                <button class="button" type="submit">Buscar</button>
-              </div>
-              <% end %>
-            </div>
-          </li>
-        </ul>
-      </section>
-    </nav>
+              </ul>
+          </div>
+                  <div id="busqueda">
+                    <div class="box">
+                      <div class="container-1">
+                        <%= form_tag(search_path, :method=>'get', :multipart => true) do %>
+                        <%= text_field_tag :search, params[:search], placeholder: "Ejemplo: Drama" %>
+                        <button class="button tiny" type="submit">Buscar</button>
+                        <% end %>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+  </div>
+</div>
+
+    <%= yield %>
+
     
 
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
-
-    <%= yield %>
     <%= javascript_include_tag "application" %>
   </body>
 </html>

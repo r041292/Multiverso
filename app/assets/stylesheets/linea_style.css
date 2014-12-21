@@ -1,0 +1,350 @@
+@charset "UTF-8";
+/* CSS Document */
+* {
+	padding:0px;
+	margin:0px;
+}
+
+#wrapheader {
+	width: 1000px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+#headerblack {
+	width: 100%;
+	background-color: #000000;
+	height: 60px;
+}
+
+#logouninorte {
+	background-image: url(/assets/logo_uninorte.png);
+	background-repeat: no-repeat;
+	width: 130px;
+	height: 40px;
+	float: left;
+	margin-top: 10px;
+}
+
+#headerblue {
+	height: 20px;
+	width: 100%;
+	background-color: #77c7ea;
+	margin-right: auto;
+	margin-left: auto;
+	background-repeat: no-repeat;
+	/* [disabled]background-origin: padding-box; */
+	background-position: center center;
+}
+ 
+.box{
+
+  width: 300px;
+  height: 50px;
+}
+
+.container-1 input#search{
+	width: 140px;
+	height: 25px;
+	background: #666;
+	border: none;
+	font-size: 10pt;
+	float: left;
+	color: #999;
+	padding-left: 15px;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+}
+
+.container-1 input#search::-webkit-input-placeholder {
+   color: #999;
+}
+ 
+.container-1 input#search:-moz-placeholder { /* Firefox 18- */
+   color: #999;  
+}
+ 
+.container-1 input#search::-moz-placeholder {  /* Firefox 19+ */
+   color: #999;  
+}
+ 
+.container-1 input#search:-ms-input-placeholder {  
+   color:#999;  
+}
+#busqueda {
+	height: 30px;
+	width: 150px;
+	float: right;
+}
+
+#navbar {
+	background-repeat: no-repeat;
+	height: 30px;
+	float: right;
+	padding-top: 11px;
+	color: #FFFFFF;
+	clear: inherit;
+	width: 370px;
+	background-image: url(/assets/222.png);
+	padding-left: 20px;
+	margin-top: 10px;
+}
+#nav_menu {
+	width: 220px;
+	float: left;
+}
+#nav_menu ul {
+	margin: 0px;
+	padding: 0px;
+	list-style-type: none;
+	float: left;
+}
+#nav_menu ul li {
+	float: left;
+}
+#nav_menu ul a {
+	color: #FFF;
+	display: block;
+	text-align: center;
+	width: 70px;
+	text-decoration: none;
+	font-family: source-sans-pro, sans-serif;
+	font-size: 15px;
+	font-weight: lighter;
+}
+
+#home_logo {
+	width: 35px;
+	height: 40px;
+	float: right;
+	clear: inherit;
+}
+#homeicon {
+	background-image: url(file:///Macintosh%20HD/Users/Lulii/Desktop/images/home_icon.png);
+	background-repeat: no-repeat;
+	width: 10px;
+	height: 25px;
+	float: right;
+	margin: 5px;	
+}
+#logo_multiverso_cuadros {
+	float: left;
+	height: 47px;
+	width: 47px;
+	background-image: url(/assets/mini_logo_multiverso.png);
+	margin-right: 15px;
+	margin-top: 7px;
+}
+
+
+
+#wrapper {
+	height: 820px;
+	width: 1000px;
+	margin-right: auto;
+	margin-left: auto;
+}
+#wrap_1 {
+	height: 230px;
+	width: 1000px;
+	background-image: url(/assets/loloo.png);
+	background-repeat: no-repeat;
+}
+#wrap_2 {
+	height: 500px;
+	width: 1000px;
+	background-image: url(/assets/zdfdfzsf.png);
+	background-repeat: no-repeat;
+}
+
+#titulo_mini_sing_1 {
+	color: #FFF;
+	font-size: 15px;
+	font-family: source-sans-pro, sans-serif;
+	padding-bottom: 5px;
+}
+#conten_sing_1 {
+	height: 80px;
+	width: 690px;
+	background-color: #a9c6d5;
+	color: #000;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 15px;
+	font-family: source-sans-pro, sans-serif;
+	padding-top: 10px;
+	padding-left: 15px;
+}
+#text_mini_sing_1 {
+	font-family: source-sans-pro, sans-serif;
+	font-weight: lighter;
+	font-size: 15px;
+	
+}
+#fecha_mini_sing_1 {
+	font-size: 15px;
+	color: #FFF;
+	width: 150px;
+	float: right;
+	margin-right: 20px;
+	margin-top: 5px;
+	font-family: source-sans-pro, sans-serif;
+	font-weight: lighter;
+	font-size: 14px;
+}
+#historia_titulo {
+	font-size: 30px;
+	color: #7ab935;
+	font-family: source-sans-pro, sans-serif;
+	text-align: center;
+	padding-top: 50px;
+	padding-bottom: 30px;
+}
+
+#titulo_mini_sing_2 {
+	color: #FFF;
+	font-size: 15px;
+	font-family: source-sans-pro, sans-serif;
+	padding-bottom: 5px;
+}
+#conten_sing_2 {
+	height: 80px;
+	width: 690px;
+	background-color: #a9c6d5;
+	color: #000;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 15px;
+	font-family: source-sans-pro, sans-serif;
+	padding-top: 10px;
+	padding-left: 15px;
+	margin-bottom: 30px;
+}
+#text_mini_sing_2 {
+	font-family: source-sans-pro, sans-serif;
+	font-weight: lighter;
+	font-size: 15px;
+	
+}
+#fecha_mini_sing_2 {
+	font-size: 15px;
+	color: #FFF;
+	width: 150px;
+	float: right;
+	margin-right: 20px;
+	margin-top: 5px;
+	font-family: source-sans-pro, sans-serif;
+	font-weight: lighter;
+	font-size: 14px;
+}
+#titulo_mini_sing_3 {
+	color: #FFF;
+	font-size: 15px;
+	font-family: source-sans-pro, sans-serif;
+	padding-bottom: 5px;
+}
+#conten_sing_3 {
+	height: 80px;
+	width: 690px;
+	background-color: #a9c6d5;
+	color: #000;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 15px;
+	font-family: source-sans-pro, sans-serif;
+	padding-top: 10px;
+	padding-left: 15px;
+	margin-bottom: 30px;
+}
+#text_mini_sing_3 {
+	font-family: source-sans-pro, sans-serif;
+	font-weight: lighter;
+	font-size: 15px;
+	
+}
+#fecha_mini_sing_3 {
+	font-size: 15px;
+	color: #FFF;
+	width: 150px;
+	float: right;
+	margin-right: 20px;
+	margin-top: 5px;
+	font-family: source-sans-pro, sans-serif;
+	font-weight: lighter;
+	font-size: 14px;
+}
+#titulo_mini_sing_4 {
+	color: #FFF;
+	font-size: 15px;
+	font-family: source-sans-pro, sans-serif;
+	padding-bottom: 5px;
+}
+#conten_sing_4 {
+	height: 80px;
+	width: 690px;
+	background-color: #a9c6d5;
+	color: #000;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 15px;
+	font-family: source-sans-pro, sans-serif;
+	padding-top: 10px;
+	padding-left: 15px;
+	margin-bottom: 25px;
+}
+#text_mini_sing_4 {
+	font-family: source-sans-pro, sans-serif;
+	font-weight: lighter;
+	font-size: 15px;
+	
+}
+#fecha_mini_sing_4 {
+	font-size: 15px;
+	color: #FFF;
+	width: 150px;
+	float: right;
+	margin-right: 20px;
+	margin-top: 5px;
+	font-family: source-sans-pro, sans-serif;
+	font-weight: lighter;
+	font-size: 14px;
+}
+
+#titulo_mini_sing_5 {
+	color: #FFF;
+	font-size: 15px;
+	font-family: source-sans-pro, sans-serif;
+	padding-bottom: 5px;
+}
+#conten_sing_5 {
+	height: 80px;
+	width: 690px;
+	background-color: #a9c6d5;
+	color: #000;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 15px;
+	font-family: source-sans-pro, sans-serif;
+	padding-top: 10px;
+	padding-left: 15px;
+	margin-bottom: 25px;
+}
+#text_mini_sing_5 {
+	font-family: source-sans-pro, sans-serif;
+	font-weight: lighter;
+	font-size: 15px;
+	
+}
+#fecha_mini_sing_5 {
+	font-size: 15px;
+	color: #FFF;
+	width: 150px;
+	float: right;
+	margin-right: 20px;
+	margin-top: 5px;
+	font-family: source-sans-pro, sans-serif;
+	font-weight: lighter;
+	font-size: 14px;
+}

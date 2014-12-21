@@ -1,0 +1,242 @@
+@charset "UTF-8";
+/* CSS Document */
+
+
+* {
+	padding:0px;
+	margin:0px;
+}
+
+#wrapper {
+	width: 1000px;
+	margin-right: auto;
+	margin-left: auto;
+	height: 1000px;
+}
+#user_box {
+	height: 470px;
+	width: 998px;
+	background-image: url(/assets/back_down_log_in_2.png);
+	background-repeat: no-repeat;
+	margin-left: 1px;
+}
+#down_image {
+	height: 210px;
+	width: 998px;
+	background-image: url(/assets/log_down_pic.png);
+	background-repeat: no-repeat;
+	margin-left: 1px;
+}
+#witebox {
+	border-radius: 10px;
+	width: 480px;
+	height: 440px;
+	background-color: #FFF;
+	margin-right: auto;
+	margin-left: auto;
+	padding-left: 30px;
+	padding-top: 30px;
+}
+#blue_mini_bar {
+	height: 130px;
+	width: 390px;
+	border-radius: 15px;
+	background-color: #91c6eb;
+	margin-left: 15px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+#logoface {
+	height: 110px;
+	width: 115px;
+	float: left;
+	margin-left: 40px;
+	margin-top: 10px;
+	background-image: url(/assets/facebook_logo.png);
+}
+#twitter {
+	height: 110px;
+	width: 115px;
+	float: left;
+	margin-left: 85px;
+	margin-top: 10px;
+	background-image: url(/assets/twitter_logo.png);
+	background-repeat: no-repeat;
+}
+#igreso {
+	font-family: source-sans-pro, sans-serif;
+	font-size: 15px;
+	font-weight: lighter;
+	color: #7ab935;
+}
+#usuario_box {
+	font-family: source-sans-pro, sans-serif;
+	font-weight: lighter;
+	font-size: 15px;
+	color: #7ab935;
+	margin-left: 15px;
+	height: 220px;
+	width: 390px;
+}
+#upper_image {
+	height: 60px;
+}
+#upper_image {
+	background-image: url(/assets/3232.png);
+}
+
+
+#cropped_image {
+	height: 60px;
+	width: 1000px;
+	margin-right: auto;
+	margin-left: auto;
+	background-image: url(/assets/cropped_head.png);
+}
+
+#wrapheader {
+	width: 1000px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 10px;
+}
+
+
+#headerblack {
+	width: 100%;
+	background-color: #000000;
+	height: 60px;
+}
+
+#logouninorte {
+	background-image: url(/assets/logo_uninorte.png);
+	background-repeat: no-repeat;
+	width: 130px;
+	height: 40px;
+	float: left;
+}
+
+#headerblue {
+	height: 130px;
+	width: 100%;
+	background-color: #77c7ea;
+	margin-right: auto;
+	margin-left: auto;
+	background-image: url(/assets/logomultiversohome.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+#navbar {
+	background-repeat: no-repeat;
+	height: 30px;
+	float: right;
+	padding-top: 11px;
+	color: #FFFFFF;
+	clear: inherit;
+	width: 500px;
+	background-image: url(/assets/222.png);
+	padding-left: 20px;
+}
+#nav_menu {
+	width: 220px;
+	float: left;
+}
+#nav_menu ul {
+	margin: 0px;
+	padding: 0px;
+	list-style-type: none;
+	float: left;
+	width: 300px;
+}
+#nav_menu ul li {
+	float: left;
+}
+#nav_menu ul a {
+	color: #FFF;
+	display: block;
+	text-align: center;
+	width: auto;
+	margin-right: 10px;
+	text-decoration: none;
+	font-family: source-sans-pro, sans-serif;
+	font-size: 15px;
+	font-weight: lighter;
+}
+#home_logo {
+	width: 35px;
+	height: 40px;
+	float: right;
+	clear: inherit;
+}
+#homeicon {
+	background-image: url(/assets/home_icon.png);
+	background-repeat: no-repeat;
+	width: 10px;
+	height: 25px;
+	float: right;
+	margin: 5px;	
+}
+
+*,
+*:before,
+*:after {
+   box-sizing: border-box;
+}
+form {
+	border: none;
+	border-radius: 5px;
+	font: 14px/1.4 "Helvetica Neue", Helvetica, Arial, sans-serif;
+	overflow: hidden;
+	width: 385px;
+}
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+input {
+  border-radius: 5px;
+  font: 14px/1.4 "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: 0;
+}
+.account-info {
+  padding: 10px 5px 0 20px;
+}
+.account-info label {
+	color: #7ab935;
+	display: block;
+	font-weight: bold;
+	margin-bottom: 10px;
+	margin-right: 15px;
+}
+.account-info input {
+	background: #fff;
+	border: 1px solid #c6c7cc;
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, .1);
+	color: #636466;
+	padding: 5px;
+	margin-top: 5px;
+	width: 100%;
+}
+.account-action {
+  background: #f0f0f2;
+  border-top: 1px solid #c6c7cc;
+  padding: 13px;
+}
+.account-action .btn {
+	background: linear-gradient(#c3d488, #4d8260);
+	border: 0;
+	color: #fff;
+	cursor: pointer;
+	font-weight: bold;
+	margin-left: 110px;
+	padding: 8px 16px;
+}
+
+.account-action .btn {
+}
+#log_wrapper {
+	height: 220px;
+	width: 390px;
+}
