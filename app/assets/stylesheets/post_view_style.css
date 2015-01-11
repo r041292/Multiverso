@@ -18,15 +18,6 @@
 	height: 60px;
 }
 
-#logouninorte {
-	background-image: url(/assets/logo_uninorte.png);
-	background-repeat: no-repeat;
-	width: 130px;
-	height: 40px;
-	float: left;
-	margin-top: 10px;
-}
-
 #headerblue {
 	height: 20px;
 	width: 100%;
@@ -73,54 +64,7 @@
 .container-1 input#search:-ms-input-placeholder {  
    color:#999;  
 }
-#busqueda {
-	height: 30px;
-	width: 150px;
-	float: right;
-}
 
-#navbar {
-	background-repeat: no-repeat;
-	height: 30px;
-	float: right;
-	padding-top: 11px;
-	color: #FFFFFF;
-	clear: inherit;
-	width: 370px;
-	background-image: url(/assets/222.png);
-	padding-left: 20px;
-	margin-top: 10px;
-}
-#nav_menu {
-	width: 220px;
-	float: left;
-}
-#nav_menu ul {
-	margin: 0px;
-	padding: 0px;
-	list-style-type: none;
-	float: left;
-}
-#nav_menu ul li {
-	float: left;
-}
-#nav_menu ul a {
-	color: #FFF;
-	display: block;
-	text-align: center;
-	width: 70px;
-	text-decoration: none;
-	font-family: source-sans-pro, sans-serif;
-	font-size: 15px;
-	font-weight: lighter;
-}
-
-#home_logo {
-	width: 35px;
-	height: 40px;
-	float: right;
-	clear: inherit;
-}
 #homeicon {
 	background-image: url(file:///Macintosh%20HD/Users/Lulii/Desktop/images/home_icon.png);
 	background-repeat: no-repeat;
@@ -135,7 +79,6 @@
 	width: 47px;
 	background-image: url(/assets/mini_logo_multiverso.png);
 	margin-right: 15px;
-	margin-top: 7px;
 }
 #pills {
 	width: 312px;

@@ -1,4 +1,6 @@
+<%= stylesheet_link_tag "post_view_style.css", media: "all" %>
 <p id="notice"><%= notice %></p>
+<!--
 <div class="row">
   <div class="large-6 large-centered columns">
     <div class="panel callout radius">
@@ -22,6 +24,42 @@
     </div>
   </div>
 </div>
+-->
 
 
 
+<div id="headerblue"></div>
+<div id="wrapper">
+  <div id="upper">
+    <div id="pills">
+      <div id="date">Fecha de Publicacion</div>
+      <div id="pillscontent"><% if @publication.type >1 %>
+        <center><%= raw @publication.url%></center>
+      <%else%>
+        <center><p><h3><%= @publication.content %></h3></p></center>
+      <%end%>
+      </div>
+      <div id="continuar">Por: <%=@publication.user.name%></div>
+      <div id="pillsuser">Continuar????</div>
+    </div>
+  </div>
+  <div id="mini_wrap">
+    <div id="opcion_1">
+      <div>
+          <% if !@publication.singularity && user_signed_in? %> 
+            <%= link_to 'Úsala en otra historia!', :controller =>"histories", :action => "show_history_continuation", :publication_id => @publication.id %>
+            <%end%>
+      </div>
+    </div>
+       <div id="opcion_2">
+         <div id="wite_box_opcion_2">
+           <ul class="breadcrumbs">
+              <%@publication.stories_which_belongs.each do |history|%>
+
+              <li><a href="/histories/<%=history.history_id%>"><%= history.history.title %></a></li>
+            <% end %>
+        </ul>
+       </div>
+       </div>
+  </div>
+</div>
